@@ -168,6 +168,25 @@
   </entry>
   
   <entry>
+    <title>php-debug</title>
+    <link href="http://maskhed.github.io/2017/04/24/php-debug/"/>
+    <id>http://maskhed.github.io/2017/04/24/php-debug/</id>
+    <published>2017-04-24T13:03:36.000Z</published>
+    <updated>2017-05-02T13:50:43.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;那些年，填过的坑&lt;/p&gt;
+&lt;p&gt;1、php7.0 &amp;amp;&amp;amp; xdebug&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/37355409/xdebug-with-php-7-on-ubuntu-apache2-not-working&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;stack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;actually had that problem and took me allot of time to figure out the solution: (if any previous php versions where installed, make sure to first get completely rid of them. if necessary purge and reinstall apache2 and php7)&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>陪你走过漫长岁月</title>
     <link href="http://maskhed.github.io/2017/04/24/%E9%99%AA%E4%BD%A0%E8%B5%B0%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88/"/>
     <id>http://maskhed.github.io/2017/04/24/陪你走过漫长岁月/</id>
@@ -181,25 +200,6 @@
         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;走过了人来人往  &lt;br&gt;&lt;br&gt;不喜欢也得欣赏  &lt;br&gt;&lt;br&gt;我是沉默的存在  &lt;br&gt;&lt;br&gt;不当你的世界 只作你肩膀  &lt;br&gt;&lt;br&gt;拒绝成长到成长  &lt;br&gt;&lt;br&gt;变成想要的模样  &lt;br&gt;&lt;br&gt;在举手投降以前  &lt;br
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>php-debug</title>
-    <link href="http://maskhed.github.io/2017/04/24/php-debug/"/>
-    <id>http://maskhed.github.io/2017/04/24/php-debug/</id>
-    <published>2017-04-24T13:03:36.000Z</published>
-    <updated>2017-05-02T13:50:43.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;那些年，填过的坑&lt;/p&gt;
-&lt;p&gt;1、php7.0 &amp;amp;&amp;amp; xdebug&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/37355409/xdebug-with-php-7-on-ubuntu-apache2-not-working&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;stack&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;actually had that problem and took me allot of time to figure out the solution: (if any previous php versions where installed, make sure to first get completely rid of them. if necessary purge and reinstall apache2 and php7)&lt;/p&gt;
     
     </summary>
     
