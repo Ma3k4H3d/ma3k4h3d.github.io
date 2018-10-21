@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maskhed.github.io/"/>
-  <updated>2018-10-21T08:01:50.852Z</updated>
+  <updated>2018-10-21T14:21:50.964Z</updated>
   <id>http://maskhed.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo &amp; Maupassant 博客搭建</title>
+    <link href="http://maskhed.github.io/2018/10/21/Hexo-Maupassant-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>http://maskhed.github.io/2018/10/21/Hexo-Maupassant-博客搭建/</id>
+    <published>2018-10-21T14:09:55.000Z</published>
+    <updated>2018-10-21T14:21:50.964Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;沉淀对于成长意义重大，希望能够借助此博客，沉淀所学所思，记录成长的历程。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="原创" scheme="http://maskhed.github.io/categories/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ATO_Test</title>
@@ -95,24 +113,6 @@
     </summary>
     
       <category term="Collect" scheme="http://maskhed.github.io/categories/Collect/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记（一）</title>
-    <link href="http://maskhed.github.io/2017/05/03/JS-study-%E4%B8%80/"/>
-    <id>http://maskhed.github.io/2017/05/03/JS-study-一/</id>
-    <published>2017-05-03T12:08:58.000Z</published>
-    <updated>2018-10-21T06:34:48.924Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;JavaScript学习笔记。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="原创" scheme="http://maskhed.github.io/categories/%E5%8E%9F%E5%88%9B/"/>
     
     
   </entry>
