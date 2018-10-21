@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maskhed.github.io/"/>
-  <updated>2017-05-06T11:47:19.000Z</updated>
+  <updated>2018-10-21T07:51:05.603Z</updated>
   <id>http://maskhed.github.io/</id>
   
   <author>
@@ -17,11 +17,56 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CVE-2017-0358</title>
+    <link href="http://maskhed.github.io/2018/10/21/CVE-2017-0358/"/>
+    <id>http://maskhed.github.io/2018/10/21/CVE-2017-0358/</id>
+    <published>2018-10-21T07:23:44.000Z</published>
+    <updated>2018-10-21T07:51:05.603Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CVE-2017-0358，Linux本地提权漏洞。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CVE_Search" scheme="http://maskhed.github.io/categories/CVE-Search/"/>
+    
+    
+      <category term="CVE" scheme="http://maskhed.github.io/tags/CVE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>腾讯玄武实验室安全动态推送</title>
+    <link href="http://maskhed.github.io/2018/10/21/xuanwu-2018-10-21/"/>
+    <id>http://maskhed.github.io/2018/10/21/xuanwu-2018-10-21/</id>
+    <published>2018-10-21T07:23:44.000Z</published>
+    <updated>2018-10-21T07:51:10.450Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Tencent Xuanwu Lab Security Daily News&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;[ Browser ]  Firefox JavaScript 类型混淆 RCE 漏洞（CVE-2018-12386）的详细分析： &lt;a href=&quot;https:/
+      
+    
+    </summary>
+    
+      <category term="腾讯玄武实验室安全动态推送" scheme="http://maskhed.github.io/categories/%E8%85%BE%E8%AE%AF%E7%8E%84%E6%AD%A6%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%AE%89%E5%85%A8%E5%8A%A8%E6%80%81%E6%8E%A8%E9%80%81/"/>
+    
+    
+      <category term="SecNews" scheme="http://maskhed.github.io/tags/SecNews/"/>
+    
+  </entry>
+  
+  <entry>
     <title>简单记录下hexo搭建步骤</title>
     <link href="http://maskhed.github.io/2017/05/06/hexo/"/>
     <id>http://maskhed.github.io/2017/05/06/hexo/</id>
     <published>2017-05-06T11:47:19.000Z</published>
-    <updated>2017-05-06T11:47:19.000Z</updated>
+    <updated>2018-10-21T06:30:36.322Z</updated>
     
     <summary type="html">
     
@@ -31,21 +76,7 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2017-0358</title>
-    <link href="http://maskhed.github.io/2017/05/06/CVE-2017-0358/"/>
-    <id>http://maskhed.github.io/2017/05/06/CVE-2017-0358/</id>
-    <published>2017-05-06T11:47:19.000Z</published>
-    <updated>2018-10-21T04:02:17.994Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CVE-2017-0358，Linux本地提权漏洞。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
+      <category term="Collect" scheme="http://maskhed.github.io/categories/Collect/"/>
     
     
   </entry>
@@ -55,13 +86,15 @@
     <link href="http://maskhed.github.io/2017/05/03/JS-study-%E4%B8%80/"/>
     <id>http://maskhed.github.io/2017/05/03/JS-study-一/</id>
     <published>2017-05-03T12:08:58.000Z</published>
-    <updated>2018-10-21T03:39:59.270Z</updated>
+    <updated>2018-10-21T06:34:48.924Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;JavaScript学习笔记。&lt;br&gt;&lt;/p&gt;
     
     </summary>
+    
+      <category term="原创" scheme="http://maskhed.github.io/categories/%E5%8E%9F%E5%88%9B/"/>
     
     
   </entry>
@@ -76,102 +109,6 @@
     <summary type="html">
     
       &lt;p&gt;　　利用SSH，在登录Git服务器的时候实现免密码登录。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vim折腾记(一)</title>
-    <link href="http://maskhed.github.io/2017/05/01/Vim%E6%8A%98%E8%85%BE%E8%AE%B0(%E4%B8%80)/"/>
-    <id>http://maskhed.github.io/2017/05/01/Vim折腾记(一)/</id>
-    <published>2017-05-01T15:30:59.000Z</published>
-    <updated>2018-10-21T03:47:47.892Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近开始使用Ubuntu，决定折腾折腾上古神器Vim，打造属于自己的IDE。记录下填过的那些坑。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 多PC同步及备份</title>
-    <link href="http://maskhed.github.io/2017/04/26/hexo-%E5%A4%9APC%E5%90%8C%E6%AD%A5%E5%8F%8A%E5%A4%87%E4%BB%BD/"/>
-    <id>http://maskhed.github.io/2017/04/26/hexo-多PC同步及备份/</id>
-    <published>2017-04-26T15:06:34.000Z</published>
-    <updated>2018-10-21T03:47:23.661Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;解决异地及多PC之间同步问题。Git服务器的选择，github &amp;amp; oschina。gtihub用于发布，oschina用于备份blog源码，因为oschina提供免费的私有仓库。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Crack Phpstorm</title>
-    <link href="http://maskhed.github.io/2017/04/26/Crack-Phpstorm/"/>
-    <id>http://maskhed.github.io/2017/04/26/Crack-Phpstorm/</id>
-    <published>2017-04-25T21:29:18.000Z</published>
-    <updated>2017-05-06T11:47:19.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;决定试试大名鼎鼎的PhpStorm,记录下安装及crack过程。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最初的梦想</title>
-    <link href="http://maskhed.github.io/2017/04/24/The-dream-of-beginning/"/>
-    <id>http://maskhed.github.io/2017/04/24/The-dream-of-beginning/</id>
-    <published>2017-04-24T14:03:36.000Z</published>
-    <updated>2018-10-21T04:10:41.952Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最初的梦想  &lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>陪你走过漫长岁月</title>
-    <link href="http://maskhed.github.io/2017/04/24/%E9%99%AA%E4%BD%A0%E8%B5%B0%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88/"/>
-    <id>http://maskhed.github.io/2017/04/24/陪你走过漫长岁月/</id>
-    <published>2017-04-24T13:03:36.000Z</published>
-    <updated>2018-10-21T04:09:52.162Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;陪你走过漫长岁月  &lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>php-debug</title>
-    <link href="http://maskhed.github.io/2017/04/24/php-debug/"/>
-    <id>http://maskhed.github.io/2017/04/24/php-debug/</id>
-    <published>2017-04-24T13:03:36.000Z</published>
-    <updated>2018-10-21T03:40:29.720Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;那些年，填过的坑  &lt;/p&gt;
     
     </summary>
     
