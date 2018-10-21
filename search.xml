@@ -17,6 +17,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
     </entry>
     
     <entry>
@@ -85,23 +91,6 @@
             <tag> SecNews </tag>
             
         </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>简单记录下hexo搭建步骤</title>
-      <link href="/2017/05/06/hexo/"/>
-      <url>/2017/05/06/hexo/</url>
-      
-        <content type="html"><![CDATA[<p>1.安装Node.js</p><p>2.安装Git</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure><a id="more"></a><p>3.安装hexo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo -g</span><br><span class="line"></span><br><span class="line">hexo init &lt;博客根目录&gt;</span><br></pre></td></tr></table></figure><p>4.发布博客到git</p><p>（1）安装hexo-deployer-Git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p><p>（2） 配置_config.yml文件<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:xxx/xxx.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p><p>5.hexo常用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo generate（hexo g） 生成</span><br><span class="line"></span><br><span class="line">hexo deploy 发布</span><br><span class="line"></span><br><span class="line">hexo g <span class="_">-d</span>   生成并发布</span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Collect </category>
-          
-      </categories>
-      
       
     </entry>
     
