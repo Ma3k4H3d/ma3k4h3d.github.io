@@ -173,22 +173,22 @@
     </entry>
     
     <entry>
-      <title>php-debug</title>
-      <link href="/2017/04/24/php-debug/"/>
-      <url>/2017/04/24/php-debug/</url>
+      <title>陪你走过漫长岁月</title>
+      <link href="/2017/04/24/%E9%99%AA%E4%BD%A0%E8%B5%B0%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88/"/>
+      <url>/2017/04/24/%E9%99%AA%E4%BD%A0%E8%B5%B0%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88/</url>
       
-        <content type="html"><![CDATA[<p>那些年，填过的坑  </p><a id="more"></a>  <p>1、php7.0 &amp;&amp; xdebug</p><p><a href="http://stackoverflow.com/questions/37355409/xdebug-with-php-7-on-ubuntu-apache2-not-working" target="_blank" rel="noopener">stack</a></p><p>actually had that problem and took me allot of time to figure out the solution: (if any previous php versions where installed, make sure to first get completely rid of them. if necessary purge and reinstall apache2 and php7)</p><!-- more --><p>first:</p><blockquote><p>sudo apt-get install php-xdebug</p></blockquote><p>then edit the php.ini file of php 7 :</p><blockquote><p>sudo gedit /etc/php/7.0/apache2/php.ini</p></blockquote><p>and just on the bottom add:</p><p>xdebug.remote_enable = On</p><p>save and of course then:</p><blockquote><p>sudo service apache2 restart</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>陪你走过漫长岁月  </p><a id="more"></a>  <p>走过了人来人往<br>不喜欢也得欣赏<br>我是沉默的存在<br>不当你的世界 只作你肩膀  </p><p>拒绝成长到成长  </p><p>变成想要的模样  </p><p>在举手投降以前  </p><p>让我再陪你一段  </p><p>陪你把沿路感想活出了答案  </p><p>陪你把独自孤单变成了勇敢  </p><p>一次次失去又重来 我没离开  </p><p>陪伴是 最长情的告白  </p><p>陪你把想念的酸 拥抱成温暖  </p><p>陪你把彷徨 写出情节来  </p><p>未来多漫长 再漫长 还有期待  </p><p>陪伴你 一直到 故事给说完   </p><p>让我们静静分享  </p><p>此刻难得的坦白  </p><p>只是无声的交谈  </p><p>都感觉幸福 感觉不孤单  </p><p>陪你把沿路感想 活出了答案  </p><p>陪你把独自孤单 变成了勇敢  </p><p>一次次失去 又重来 我没离开  </p><p>陪伴是 最长情的告白    </p><p>陪你把想念的酸 拥抱成温暖    </p><p>陪你把彷徨 写出情节来    </p><p>未来多漫长 再漫长 还有期待    </p><p>陪伴你 一直到 故事给说完  </p>]]></content>
       
       
       
     </entry>
     
     <entry>
-      <title>陪你走过漫长岁月</title>
-      <link href="/2017/04/24/%E9%99%AA%E4%BD%A0%E8%B5%B0%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88/"/>
-      <url>/2017/04/24/%E9%99%AA%E4%BD%A0%E8%B5%B0%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88/</url>
+      <title>php-debug</title>
+      <link href="/2017/04/24/php-debug/"/>
+      <url>/2017/04/24/php-debug/</url>
       
-        <content type="html"><![CDATA[<p>陪你走过漫长岁月  </p><a id="more"></a>  <p>走过了人来人往<br>不喜欢也得欣赏<br>我是沉默的存在<br>不当你的世界 只作你肩膀  </p><p>拒绝成长到成长  </p><p>变成想要的模样  </p><p>在举手投降以前  </p><p>让我再陪你一段  </p><p>陪你把沿路感想活出了答案  </p><p>陪你把独自孤单变成了勇敢  </p><p>一次次失去又重来 我没离开  </p><p>陪伴是 最长情的告白  </p><p>陪你把想念的酸 拥抱成温暖  </p><p>陪你把彷徨 写出情节来  </p><p>未来多漫长 再漫长 还有期待  </p><p>陪伴你 一直到 故事给说完   </p><p>让我们静静分享  </p><p>此刻难得的坦白  </p><p>只是无声的交谈  </p><p>都感觉幸福 感觉不孤单  </p><p>陪你把沿路感想 活出了答案  </p><p>陪你把独自孤单 变成了勇敢  </p><p>一次次失去 又重来 我没离开  </p><p>陪伴是 最长情的告白    </p><p>陪你把想念的酸 拥抱成温暖    </p><p>陪你把彷徨 写出情节来    </p><p>未来多漫长 再漫长 还有期待    </p><p>陪伴你 一直到 故事给说完  </p>]]></content>
+        <content type="html"><![CDATA[<p>那些年，填过的坑  </p><a id="more"></a>  <p>1、php7.0 &amp;&amp; xdebug</p><p><a href="http://stackoverflow.com/questions/37355409/xdebug-with-php-7-on-ubuntu-apache2-not-working" target="_blank" rel="noopener">stack</a></p><p>actually had that problem and took me allot of time to figure out the solution: (if any previous php versions where installed, make sure to first get completely rid of them. if necessary purge and reinstall apache2 and php7)</p><!-- more --><p>first:</p><blockquote><p>sudo apt-get install php-xdebug</p></blockquote><p>then edit the php.ini file of php 7 :</p><blockquote><p>sudo gedit /etc/php/7.0/apache2/php.ini</p></blockquote><p>and just on the bottom add:</p><p>xdebug.remote_enable = On</p><p>save and of course then:</p><blockquote><p>sudo service apache2 restart</p></blockquote>]]></content>
       
       
       
