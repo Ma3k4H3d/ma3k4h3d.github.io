@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maskhed.github.io/"/>
-  <updated>2018-10-21T15:02:19.402Z</updated>
+  <updated>2018-10-26T16:03:23.164Z</updated>
   <id>http://maskhed.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用Github辅助漏洞分析</title>
+    <link href="http://maskhed.github.io/2018/10/26/%E5%88%A9%E7%94%A8Github%E8%BE%85%E5%8A%A9%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/"/>
+    <id>http://maskhed.github.io/2018/10/26/利用Github辅助漏洞分析/</id>
+    <published>2018-10-26T15:58:57.000Z</published>
+    <updated>2018-10-26T16:03:23.164Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;来自于lcatro师傅的分享，原文地址如下：&lt;br&gt;&lt;a href=&quot;https://github.com/lcatro/How-to-Read-Source-and-Fuzzing/blob/master/1.Github.md&quot; target=&quot;_blank&quot; rel=
+      
+    
+    </summary>
+    
+      <category term="Collect" scheme="http://maskhed.github.io/categories/Collect/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo &amp; Maupassant 博客搭建</title>
@@ -55,6 +76,26 @@
   </entry>
   
   <entry>
+    <title>CVE-2017-0358</title>
+    <link href="http://maskhed.github.io/2018/10/21/CVE-2017-0358/"/>
+    <id>http://maskhed.github.io/2018/10/21/CVE-2017-0358/</id>
+    <published>2018-10-21T07:23:44.000Z</published>
+    <updated>2018-10-21T07:51:05.603Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CVE-2017-0358，Linux本地提权漏洞。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CVE_Search" scheme="http://maskhed.github.io/categories/CVE-Search/"/>
+    
+    
+      <category term="CVE" scheme="http://maskhed.github.io/tags/CVE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>腾讯玄武实验室安全动态推送</title>
     <link href="http://maskhed.github.io/2018/10/21/xuanwu-2018-10-21/"/>
     <id>http://maskhed.github.io/2018/10/21/xuanwu-2018-10-21/</id>
@@ -76,44 +117,6 @@
     
     
       <category term="SecNews" scheme="http://maskhed.github.io/tags/SecNews/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2017-0358</title>
-    <link href="http://maskhed.github.io/2018/10/21/CVE-2017-0358/"/>
-    <id>http://maskhed.github.io/2018/10/21/CVE-2017-0358/</id>
-    <published>2018-10-21T07:23:44.000Z</published>
-    <updated>2018-10-21T07:51:05.603Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CVE-2017-0358，Linux本地提权漏洞。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="CVE_Search" scheme="http://maskhed.github.io/categories/CVE-Search/"/>
-    
-    
-      <category term="CVE" scheme="http://maskhed.github.io/tags/CVE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记</title>
-    <link href="http://maskhed.github.io/2017/05/03/JS-study/"/>
-    <id>http://maskhed.github.io/2017/05/03/JS-study/</id>
-    <published>2017-05-03T12:08:58.000Z</published>
-    <updated>2018-10-26T15:49:07.038Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录在学习 JavaScript 过程中的点点滴滴。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="原创" scheme="http://maskhed.github.io/categories/%E5%8E%9F%E5%88%9B/"/>
-    
     
   </entry>
   
