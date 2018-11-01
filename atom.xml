@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maskhed.github.io/"/>
-  <updated>2018-10-26T16:27:08.824Z</updated>
+  <updated>2018-11-01T15:13:27.285Z</updated>
   <id>http://maskhed.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cyber Grand Challenge 简介</title>
+    <link href="http://maskhed.github.io/2018/11/01/CGC/"/>
+    <id>http://maskhed.github.io/2018/11/01/CGC/</id>
+    <published>2018-11-01T15:03:15.000Z</published>
+    <updated>2018-11-01T15:13:27.285Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;2016年8月在美国拉斯维加斯举办的 Defcon CTF，一支名为 Mayhem 的机器人战队与另外十四支人类顶尖CTF战队上演了信息安全领域首次人机黑客对战。该事件在人工智能和信息安全领域具有里程碑式的意义，是机器智能开始深入影响信息安全的标志性事件之一。代表机器智能的
+      
+    
+    </summary>
+    
+      <category term="原创" scheme="http://maskhed.github.io/categories/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+      <category term="CGC" scheme="http://maskhed.github.io/tags/CGC/"/>
+    
+  </entry>
   
   <entry>
     <title>Fuzzing技术总结与工具列表</title>
@@ -100,24 +123,6 @@
     
     
       <category term="Hexo" scheme="http://maskhed.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ATO_Test</title>
-    <link href="http://maskhed.github.io/2018/10/21/ATO-Test/"/>
-    <id>http://maskhed.github.io/2018/10/21/ATO-Test/</id>
-    <published>2018-10-21T08:00:18.000Z</published>
-    <updated>2018-10-21T08:01:50.852Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="ATO-ThreatIntelligence" scheme="http://maskhed.github.io/categories/ATO-ThreatIntelligence/"/>
-    
-    
-      <category term="OSINT" scheme="http://maskhed.github.io/tags/OSINT/"/>
     
   </entry>
   
