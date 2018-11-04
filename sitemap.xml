@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://maskhed.github.io/2018/11/01/CGC/</loc>
+    
+    <lastmod>2018-11-04T13:16:17.332Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://maskhed.github.io/2018/10/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     
     <lastmod>2018-11-03T01:26:51.630Z</lastmod>
@@ -9,23 +16,9 @@
   </url>
   
   <url>
-    <loc>http://maskhed.github.io/2018/11/01/CGC/</loc>
-    
-    <lastmod>2018-11-02T12:04:33.425Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://maskhed.github.io/CGC/index.html</loc>
     
     <lastmod>2018-11-01T15:08:42.282Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://maskhed.github.io/2018/10/26/xuanwu-2018-10-26/</loc>
-    
-    <lastmod>2018-10-28T12:51:18.954Z</lastmod>
     
   </url>
   
@@ -89,20 +82,6 @@
     <loc>http://maskhed.github.io/OSINT/index.html</loc>
     
     <lastmod>2018-10-21T08:03:00.796Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://maskhed.github.io/2018/10/21/ATO-Test/</loc>
-    
-    <lastmod>2018-10-21T08:01:50.852Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://maskhed.github.io/2018/10/21/xuanwu-2018-10-21/</loc>
-    
-    <lastmod>2018-10-21T07:51:10.450Z</lastmod>
     
   </url>
   

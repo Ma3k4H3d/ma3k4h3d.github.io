@@ -60,29 +60,6 @@
     </entry>
     
     <entry>
-      <title>腾讯玄武实验室安全动态推送</title>
-      <link href="/2018/10/26/xuanwu-2018-10-26/"/>
-      <url>/2018/10/26/xuanwu-2018-10-26/</url>
-      
-        <content type="html"><![CDATA[<p>Tencent Xuanwu Lab Security Daily News  </p><ul><li><p>[ Debug ]  源代码级别调试 XUN 内核：<br><a href="https://shadowfile.inode.link/blog/2018/10/source-level-debugging-the-xnu-kernel/" target="_blank" rel="noopener">https://shadowfile.inode.link/blog/2018/10/source-level-debugging-the-xnu-kernel/</a>  </p></li><li><p>[ Linux ]  介绍如何通过 Ftrace 来 Hook Linux内核函数：<br><a href="https://movaxbx.ru/2018/10/12/hooking-linux-kernel-functions-how-to-hook-functions-with-ftrace/" target="_blank" rel="noopener">https://movaxbx.ru/2018/10/12/hooking-linux-kernel-functions-how-to-hook-functions-with-ftrace/</a>  </p></li><li><p>[ MalwareAnalysis ]  Malwarebytes 对 Mac 恶意软件是如何通过拦截加密流量进行广告注入的分析：<br><a href="https://blog.malwarebytes.com/threat-analysis/2018/10/mac-malware-intercepts-encrypted-web-traffic-for-ad-injection/" target="_blank" rel="noopener">https://blog.malwarebytes.com/threat-analysis/2018/10/mac-malware-intercepts-encrypted-web-traffic-for-ad-injection/</a>  </p></li><li><p>[ MalwareAnalysis ]   Cobalt Gang 组织使用的恶意文档构建技术及其使用的基础设施分析：<br><a href="https://researchcenter.paloaltonetworks.com/2018/10/unit42-new-techniques-uncover-attribute-cobalt-gang-commodity-builders-infrastructure-revealed/" target="_blank" rel="noopener">https://researchcenter.paloaltonetworks.com/2018/10/unit42-new-techniques-uncover-attribute-cobalt-gang-commodity-builders-infrastructure-revealed/</a>  </p></li><li><p>[ Others ]  绕过 AWL 白名单使用 SVG 调用 ActiveX 执行命令：<br><a href="https://medium.com/@mattharr0ey/whitelisting-awl-bypassing-highest-rules-srp-using-microsofto-webbrowser-dbcc27f2cadc" target="_blank" rel="noopener">https://medium.com/@mattharr0ey/whitelisting-awl-bypassing-highest-rules-srp-using-microsofto-webbrowser-dbcc27f2cadc</a>  </p></li><li><p>[ Others ]  Control Register Access Exiting and Crashing VMware：<br><a href="https://howtohypervise.blogspot.com/2018/10/control-register-access-exiting-and.html" target="_blank" rel="noopener">https://howtohypervise.blogspot.com/2018/10/control-register-access-exiting-and.html</a>  </p></li><li><p>[ Others ]   使用 DNS over HTTPS (DoH) 构建 C2 基础架构：<br><a href="https://outflank.nl/blog/2018/10/25/building-resilient-c2-infrastructues-using-dns-over-https/" target="_blank" rel="noopener">https://outflank.nl/blog/2018/10/25/building-resilient-c2-infrastructues-using-dns-over-https/</a>  </p></li><li><p>[ Vulnerability ]  X.Org X server 命令行参数验证不当可导致权限提升与任意文件覆盖(CVE-2018-14665) ：<br><a href="https://seclists.org/oss-sec/2018/q4/99" target="_blank" rel="noopener">https://seclists.org/oss-sec/2018/q4/99</a>  </p></li><li><p>[ Vulnerability ]  libtiff 未进行有效验证直接解码任意大小的 JBIG 到目标缓冲区（CVE-2018-18557），来自 Project Zero：<br><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1697" target="_blank" rel="noopener">https://bugs.chromium.org/p/project-zero/issues/detail?id=1697</a>  </p></li><li><p>[ Vulnerability ]  systemd-networkd 的 dhcpv6 客户端越界写内存漏洞披露(CVE-2018-15688)：<br><a href="https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1795921" target="_blank" rel="noopener">https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1795921</a>  </p></li><li><p>[ Vulnerability ]  Sophos HitmanPro.Alert 中的内存泄露和代码执行漏洞披露 (CVE-2018-3970、CVE-2018-3971)：<br><a href="https://blog.talosintelligence.com/2018/10/vulnerability-spotlight-talos-2018.html" target="_blank" rel="noopener">https://blog.talosintelligence.com/2018/10/vulnerability-spotlight-talos-2018.html</a>  </p></li><li><p>[ Vulnerability ]  OpenBSD Xorg 服务提权漏洞可在远程 SSH 会话中触发(CVE-2018-14665)：<br><a href="https://twitter.com/i/web/status/1055568290112831490" target="_blank" rel="noopener">https://twitter.com/i/web/status/1055568290112831490</a>  </p></li><li><p>[ Vulnerability ]  WebEx 中的 WebexUpdateService存在漏洞，允许攻击者远程执行 SYSTEM 权限的代码 ：<br><a href="https://blog.skullsecurity.org/2018/technical-rundown-of-webexec" target="_blank" rel="noopener">https://blog.skullsecurity.org/2018/technical-rundown-of-webexec</a>  </p></li><li><p>[ Windows ]  Windows Notification Facility 组件详细介绍：<br><a href="https://blog.quarkslab.com/playing-with-the-windows-notification-facility-wnf.html" target="_blank" rel="noopener">https://blog.quarkslab.com/playing-with-the-windows-notification-facility-wnf.html</a>  </p></li><li><p>[ Pentest ]  介绍如何使用 MySQL 位函数和运算符进行基于时间的高效 SQL 盲注 ：<br><a href="https://stealingthe.network/efficient-time-based-blind-sql-injection-using-mysql-bit-functions-and-operators/" target="_blank" rel="noopener">https://stealingthe.network/efficient-time-based-blind-sql-injection-using-mysql-bit-functions-and-operators/</a>  </p></li><li><p>[ Tools ]  Proteus：可以从指令级配置文件中检测Android模拟器（Paper） ：<br><a href="http://www.bu.edu/peaclab/files/2018/07/sahin_proteus_preprint.pdf" target="_blank" rel="noopener">http://www.bu.edu/peaclab/files/2018/07/sahin_proteus_preprint.pdf</a>  </p></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 腾讯玄武实验室安全动态推送 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> SecNews </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>采用 Hexo 搭建个人博客</title>
       <link href="/2018/10/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
       <url>/2018/10/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
@@ -106,29 +83,6 @@
     </entry>
     
     <entry>
-      <title>ATO_Test</title>
-      <link href="/2018/10/21/ATO-Test/"/>
-      <url>/2018/10/21/ATO-Test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> ATO-ThreatIntelligence </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OSINT </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>CVE-2017-0358</title>
       <link href="/2018/10/21/CVE-2017-0358/"/>
       <url>/2018/10/21/CVE-2017-0358/</url>
@@ -146,29 +100,6 @@
         <tags>
             
             <tag> CVE </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>腾讯玄武实验室安全动态推送</title>
-      <link href="/2018/10/21/xuanwu-2018-10-21/"/>
-      <url>/2018/10/21/xuanwu-2018-10-21/</url>
-      
-        <content type="html"><![CDATA[<p>Tencent Xuanwu Lab Security Daily News</p><ul><li><p>[ Browser ]  Firefox JavaScript 类型混淆 RCE 漏洞（CVE-2018-12386）的详细分析： <a href="https://blogs.securiteam.com/index.php/archives/3765" target="_blank" rel="noopener">https://blogs.securiteam.com/index.php/archives/3765</a></p></li><li><p>[ Industry News ]  2018年12月31日 PHP 5.6.x 的安全支持将正式停止，大约 62％ 的互联网站点将运行不受支持的 PHP 版本: <a href="https://www.zdnet.com/article/around-62-of-all-internet-sites-will-run-an-unsupported-php-version-in-10-weeks/" target="_blank" rel="noopener">https://www.zdnet.com/article/around-62-of-all-internet-sites-will-run-an-unsupported-php-version-in-10-weeks/</a></p></li><li><p>[ MalwareAnalysis ]  通过动态二进制文件检测，对轻量级恶意软件进行行为分析: <a href="https://www.slideshare.net/MaximShudrak/tricky-sample-hack-it-easy-applying-dynamic-binary-inastrumentation-to-lightweight-malware-behaviour-analysis" target="_blank" rel="noopener">https://www.slideshare.net/MaximShudrak/tricky-sample-hack-it-easy-applying-dynamic-binary-inastrumentation-to-lightweight-malware-behaviour-analysis</a></p></li><li><p>[ Others ]  如何寻找新的持久化方式: <a href="http://www.hexacorn.com/blog/2018/10/14/how-to-find-new-persistence-tricks/" target="_blank" rel="noopener">http://www.hexacorn.com/blog/2018/10/14/how-to-find-new-persistence-tricks/</a></p></li><li><p>[ Tools ]  haxxmap - 代理 IMAP 服务获取密码的工具: <a href="https://github.com/mrexodia/haxxmap" target="_blank" rel="noopener">https://github.com/mrexodia/haxxmap</a></p></li><li><p>[ Tools ]  ReconDog - 用于侦查信息的瑞士军刀: <a href="https://github.com/s0md3v/ReconDog" target="_blank" rel="noopener">https://github.com/s0md3v/ReconDog</a></p></li><li><p>[ Tools ]   tcpbin - 记录 TCP  Socket 详细日志的工具: <a href="https://github.com/ecx86/tcpbin" target="_blank" rel="noopener">https://github.com/ecx86/tcpbin</a></p></li><li><p>[ Tools ]  对专有汽车协议 CANalyzat0r 的安全分析工具: <a href="https://www.schutzwerk.com/en/43/posts/canalyzat0r/" target="_blank" rel="noopener">https://www.schutzwerk.com/en/43/posts/canalyzat0r/</a></p></li><li><p>[ Tools ]  censys-subdomain-finder - 从 Censys 的证书透明日志中收集子域名的工具: <a href="https://github.com/christophetd/censys-subdomain-finder" target="_blank" rel="noopener">https://github.com/christophetd/censys-subdomain-finder</a></p></li><li><p>[ Android ]  Android Pwn2Own 2017 漏洞的介绍与演示: <a href="https://labs.mwrinfosecurity.com/assets/BlogFiles/the-mate-escape-huawei-pwn2own-2018-10-13.pdf" target="_blank" rel="noopener">https://labs.mwrinfosecurity.com/assets/BlogFiles/the-mate-escape-huawei-pwn2own-2018-10-13.pdf</a></p></li><li><p>[ Blockchain ]  Not a fair game, Dice2win公平性分析: <a href="http://blogs.360.cn/post/Fairness_Analysis_of_Dice2win.html" target="_blank" rel="noopener">http://blogs.360.cn/post/Fairness_Analysis_of_Dice2win.html</a></p></li><li><p>[ Industry News ]  CloudFlare 将 XDP 集成到其 DDoS 缓解策略中： <a href="https://netdevconf.org/2.1/slides/apr6/bertin_Netdev-XDP.pdf" target="_blank" rel="noopener">https://netdevconf.org/2.1/slides/apr6/bertin_Netdev-XDP.pdf</a></p></li><li><p>[ MalwareAnalysis ]  对 Hancitor 恶意样本的深入分析： 1） <a href="https://0ffset.wordpress.com/2018/08/12/post-0x16-hancitor-stage-1/" target="_blank" rel="noopener">https://0ffset.wordpress.com/2018/08/12/post-0x16-hancitor-stage-1/</a> <a href="http://2" target="_blank" rel="noopener">2）https://0ffset.wordpress.com/2018/10/14/post-0x16-hancitor-stage-2/</a>https//0ffset.wordpress.com/2018/10/14/post-0x16-hancitor-stage-2/)</p></li><li><p>[ Mobile ]  GSM 移动网络简介-诺基亚网络监视器(Video)： <a href="https://www.youtube.com/watch?v=IuxBfHnP5S0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=IuxBfHnP5S0</a></p></li><li><p>[ Others ]  Mozilla 公司的 Firefox 应用程序更新服务安全审计报告： <a href="https://drive.google.com/file/d/1v53GCYPxzoZmB1dCop1yJfZgS1wi64dS/view" target="_blank" rel="noopener">https://drive.google.com/file/d/1v53GCYPxzoZmB1dCop1yJfZgS1wi64dS/view</a></p></li><li><p>[ Others ]  ‘How to irregular cyber warfare’,关于不规则网络战策略的介绍: <a href="https://blog.erratasec.com/2018/10/how-to-irregular-cyber-warfare.html#.W8NRddUzaUk" target="_blank" rel="noopener">https://blog.erratasec.com/2018/10/how-to-irregular-cyber-warfare.html#.W8NRddUzaUk</a></p></li><li><p>[ Symbolic Execution ]  通过使用符号执行技术，自动化分析堆分配器，来评估一个补丁是否能缓解攻击 (paper): <a href="https://securitygossip.com/blog/2018/10/12/heaphopper-bringing-bounded-model-checking-to-heap-implementation-security/" target="_blank" rel="noopener">https://securitygossip.com/blog/2018/10/12/heaphopper-bringing-bounded-model-checking-to-heap-implementation-security/</a></p></li><li><p>[ Symbolic Execution ]  对 Symbolic Emulator 的详细介绍： Part 1 : <a href="https://sean.heelan.io/2012/03/23/anatomy-of-a-symbolic-emulator-part-1-trace-generation/" target="_blank" rel="noopener">https://sean.heelan.io/2012/03/23/anatomy-of-a-symbolic-emulator-part-1-trace-generation/</a> Part 2： <a href="https://sean.heelan.io/2012/03/23/anatomy-of-a-symbolic-emulator-part-2-introducing-symbolic-data/" target="_blank" rel="noopener">https://sean.heelan.io/2012/03/23/anatomy-of-a-symbolic-emulator-part-2-introducing-symbolic-data/</a></p></li><li><p>[ Tools ]  适用于 Oracle JDBC 的后门介绍： <a href="https://medium.com/@airman604/introducing-jdbc-backdoor-175fbb509f62" target="_blank" rel="noopener">https://medium.com/@airman604/introducing-jdbc-backdoor-175fbb509f62</a> GitHub: <a href="https://github.com/airman604/jdbc-backdoor" target="_blank" rel="noopener">https://github.com/airman604/jdbc-backdoor</a></p></li><li><p>[ Tools ]  drAFL - AFL + DynamoRIO 可以 Fuzzing Linu x上没有源代码的二进制文件 ： <a href="https://github.com/mxmssh/drAFL" target="_blank" rel="noopener">https://github.com/mxmssh/drAFL</a></p></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 腾讯玄武实验室安全动态推送 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> SecNews </tag>
             
         </tags>
       
