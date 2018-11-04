@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maskhed.github.io/"/>
-  <updated>2018-11-04T13:16:17.332Z</updated>
+  <updated>2018-11-04T13:57:27.116Z</updated>
   <id>http://maskhed.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ReadingList</title>
+    <link href="http://maskhed.github.io/2020/11/04/ReadingList/"/>
+    <id>http://maskhed.github.io/2020/11/04/ReadingList/</id>
+    <published>2020-11-04T13:21:36.000Z</published>
+    <updated>2018-11-04T13:57:27.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Flag：将待阅的书籍、论文、资料梳理成列表，督促自己一篇篇完成。&lt;/p&gt;
+&lt;h2 id=&quot;待阅&quot;&gt;&lt;a href=&quot;#待阅&quot; class=&quot;headerlink&quot; title=&quot;待阅&quot;&gt;&lt;/a&gt;待阅&lt;/h2&gt;&lt;h3 id=&quot;1）论文&quot;&gt;&lt;a href=&quot;#1）论文&quot; cl
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Cyber Grand Challenge 简介</title>
@@ -98,26 +118,6 @@
     
     
       <category term="Hexo" scheme="http://maskhed.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2017-0358</title>
-    <link href="http://maskhed.github.io/2018/10/21/CVE-2017-0358/"/>
-    <id>http://maskhed.github.io/2018/10/21/CVE-2017-0358/</id>
-    <published>2018-10-21T07:23:44.000Z</published>
-    <updated>2018-10-21T07:51:05.603Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CVE-2017-0358，Linux本地提权漏洞。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="CVE_Search" scheme="http://maskhed.github.io/categories/CVE-Search/"/>
-    
-    
-      <category term="CVE" scheme="http://maskhed.github.io/tags/CVE/"/>
     
   </entry>
   
