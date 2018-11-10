@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maskhed.github.io/"/>
-  <updated>2018-11-10T03:50:33.813Z</updated>
+  <updated>2018-11-10T08:13:31.090Z</updated>
   <id>http://maskhed.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>即使风雨兼程，也能守得云开见月明</title>
+    <link href="http://maskhed.github.io/2020/12/08/%E9%A3%8E%E9%9B%A8%E5%85%BC%E7%A8%8B/"/>
+    <id>http://maskhed.github.io/2020/12/08/风雨兼程/</id>
+    <published>2020-12-08T00:58:56.000Z</published>
+    <updated>2018-11-10T08:13:31.090Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文是某次刷知乎时偶然看到的，虽然作者以“读博”为例，但“修真之旅”却并不仅限于此。每次读来都深以为然，无论如何，愿自己在“修真之旅”中也能够“守得云开见月明”。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="成长轨迹" scheme="http://maskhed.github.io/categories/%E6%88%90%E9%95%BF%E8%BD%A8%E8%BF%B9/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ReadingList</title>
@@ -51,24 +69,6 @@
     
     
       <category term="CGC AEG" scheme="http://maskhed.github.io/tags/CGC-AEG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>即使风雨兼程，也能守得云开见月明</title>
-    <link href="http://maskhed.github.io/2018/11/08/%E9%A3%8E%E9%9B%A8%E5%85%BC%E7%A8%8B/"/>
-    <id>http://maskhed.github.io/2018/11/08/风雨兼程/</id>
-    <published>2018-11-08T00:58:56.000Z</published>
-    <updated>2018-11-08T01:09:32.559Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文是某次刷知乎时偶然看到的，虽然作者以“读博”为例，但“修真之旅”却并不仅限于此。每次读来都深以为然，无论如何，愿自己在“修真之旅”中也能够“守得云开见月明”。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="成长轨迹" scheme="http://maskhed.github.io/categories/%E6%88%90%E9%95%BF%E8%BD%A8%E8%BF%B9/"/>
-    
     
   </entry>
   
