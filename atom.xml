@@ -53,6 +53,26 @@
   </entry>
   
   <entry>
+    <title>初试 CVE</title>
+    <link href="http://maskhed.github.io/2018/11/16/First-CVE/"/>
+    <id>http://maskhed.github.io/2018/11/16/First-CVE/</id>
+    <published>2018-11-16T10:48:31.000Z</published>
+    <updated>2018-11-16T10:54:24.377Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为一只信安菜鸡，也不晓得从何时起心心念念的想拥有属于自己的 CVE-ID。基于这简单的愿景，于是摇摇摆摆的迈开了尝试的步伐…  &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂货铺" scheme="http://maskhed.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
+    
+    
+      <category term="CVE" scheme="http://maskhed.github.io/tags/CVE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>漏洞自动化利用</title>
     <link href="http://maskhed.github.io/2018/11/16/AEG-Research-Status/"/>
     <id>http://maskhed.github.io/2018/11/16/AEG-Research-Status/</id>
@@ -89,26 +109,6 @@
     
     
       <category term="CGC AEG" scheme="http://maskhed.github.io/tags/CGC-AEG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于搬瓦工的 ShadowSocks 搭建</title>
-    <link href="http://maskhed.github.io/2018/11/06/SS%E6%90%AD%E5%BB%BA/"/>
-    <id>http://maskhed.github.io/2018/11/06/SS搭建/</id>
-    <published>2018-11-06T05:51:56.000Z</published>
-    <updated>2018-11-10T03:51:22.240Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在日常工作与学习过程中，没有Google实在不方便，之前一直使用IPv6作为替代解决方案，但在不支持IPv6的网络中很是尴尬，于是决定利用 VPS 结合 SS（ShadowSocks）搭建属于自己的梯子，做个相对长久的解决方案。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂货铺" scheme="http://maskhed.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
-    
-    
-      <category term="SS" scheme="http://maskhed.github.io/tags/SS/"/>
     
   </entry>
   

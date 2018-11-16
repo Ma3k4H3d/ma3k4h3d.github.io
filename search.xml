@@ -37,6 +37,29 @@
     </entry>
     
     <entry>
+      <title>初试 CVE</title>
+      <link href="/2018/11/16/First-CVE/"/>
+      <url>/2018/11/16/First-CVE/</url>
+      
+        <content type="html"><![CDATA[<p>作为一只信安菜鸡，也不晓得从何时起心心念念的想拥有属于自己的 CVE-ID。基于这简单的愿景，于是摇摇摆摆的迈开了尝试的步伐…  </p><a id="more"></a><h2 id="0x00-关于-CVE"><a href="#0x00-关于-CVE" class="headerlink" title="0x00 关于 CVE"></a>0x00 关于 CVE</h2><p><strong>1、简介</strong><br>CVE(Common Vulnerabilities &amp; Exposures，通用漏洞披露) 是国际著名的安全漏洞库，也是对已知漏洞和安全缺陷的标准化名称列表。是一个由业界、政府以及学术界组成的非盈利性的国际组织，其使命是为了更加快速而有效地鉴别、发现并修复软件产品中的安全漏洞。<br><img src="/2018/11/16/First-CVE/cve.png" alt=""></p><p><strong>2、组织机制</strong><br>CANs(CVE Numbering Authority) 是 CVE-ID 的实际分发机构，METRE 依照按需分配的原则向 CNA 成员分配 CVE-ID 编号池，供其分发漏洞编号。详细列表可参看<a href="https://cve.mitre.org/cve/request_id.html#cna_coverage" target="_blank" rel="noopener">CANs成员</a>。<br><img src="/2018/11/16/First-CVE/cna.png" alt=""></p><p><strong>3、申请流程</strong><br>METRE 并不会主动发放 CVE-ID，需要申请者向 CNAs 提出申请，通常情况下包含以下环节：<br>1）挖掘漏洞，编写PoC；<br>2）通报厂商，留存相关材料（PoC、截图、链接等）；<br>3）在 CVE 网站上发起申请，并依照要求填写相关内容；<br>4）METRE 向申请者发放 CVE-ID，同时根据 CVE-ID 在官网上创建“空白”页面；<br>5）审核通过后 METRE 向申请者确认 CVE-ID，并更新 CVE 网站上对应漏洞的内容。</p><h2 id="0x01-实践检验"><a href="#0x01-实践检验" class="headerlink" title="0x01 实践检验"></a>0x01 实践检验</h2><p>1、 漏洞确认<br>此次尝试以“Distributed Weakness Filing Project”的方式申请 CVE 编号。首先在 Github 上选择感兴趣的项目，然后针对该项目进行漏洞挖掘，成功后编写PoC并提交 Issues。<br><img src="/2018/11/16/First-CVE/xss.png" alt=""></p><p>2、 申请 CVE-ID<br><a href="https://request.distributedweaknessfiling.org" target="_blank" rel="noopener">申请地址</a>，依照要求填写相关内容（共需六步），漏洞细节提交 Issue 对应的链接即可。<br><img src="/2018/11/16/First-CVE/2.png" alt=""><br>完成申请后会收到来自 MITRE 的邮件。<br><img src="/2018/11/16/First-CVE/email-1.png" alt=""></p><p>3、 喜提 ID<br>两天后收到 CVE 申请通过的邮件通知，至此获得了第一个 CVE-ID。事实上，CVE 编号只是一个规范化的产物，真正的含金量还得看实际内容。援引tk教主的话：“喜悦主要来自于漏洞本身，以及探索和挑战的过程”。目前还是太菜，需要学习的东西太多，争取来年能够输出具有含金量的 CVE。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂货铺 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CVE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>漏洞自动化利用</title>
       <link href="/2018/11/16/AEG-Research-Status/"/>
       <url>/2018/11/16/AEG-Research-Status/</url>
