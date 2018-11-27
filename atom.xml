@@ -53,6 +53,26 @@
   </entry>
   
   <entry>
+    <title>Mr.WxRobot</title>
+    <link href="http://maskhed.github.io/2018/11/27/Mr-WxRobot/"/>
+    <id>http://maskhed.github.io/2018/11/27/Mr-WxRobot/</id>
+    <published>2018-11-27T13:01:26.000Z</published>
+    <updated>2018-11-27T13:08:22.870Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于项目需要，最近了解了下微信机器人。通过对微信个人号的自动化操作，不仅可以实现自动陪聊、抢红包、群消息同步等功能，甚至能够实现&lt;a href=&quot;https://github.com/zeusees/HyperLPR&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;车牌识别&lt;/a&gt;、&lt;a href=&quot;https://blog.csdn.net/weixin_40193776/article/details/78111724&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;OCR等功能&lt;/a&gt;。调研后发现两个项目比较受欢迎&lt;a href=&quot;https://github.com/littlecodersh/ItChat&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;itchat&lt;/a&gt;与&lt;a href=&quot;https://github.com/youfou/wxpy&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;wxpy&lt;/a&gt;。项目的 Star 与 Fork 数量都颇为可观。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂货铺" scheme="http://maskhed.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
+    
+    
+      <category term="Mr.Robot" scheme="http://maskhed.github.io/tags/Mr-Robot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>初试 CVE</title>
     <link href="http://maskhed.github.io/2018/11/16/First-CVE/"/>
     <id>http://maskhed.github.io/2018/11/16/First-CVE/</id>
@@ -89,26 +109,6 @@
     
     
       <category term="AEG" scheme="http://maskhed.github.io/tags/AEG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rex 源代码分析（一）</title>
-    <link href="http://maskhed.github.io/2018/11/10/rex-1/"/>
-    <id>http://maskhed.github.io/2018/11/10/rex-1/</id>
-    <published>2018-11-10T03:24:23.000Z</published>
-    <updated>2018-11-10T04:04:57.023Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;对于研究 &lt;a href=&quot;https://github.com/maskhed/MyPapers/blob/master/AEG_Automatic_Exploit_Generation.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Automatic Exploit Generation （AEG）&lt;/a&gt;的同学来说，学习并理解 &lt;a href=&quot;https://github.com/shellphish/rex&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Rex&lt;/a&gt; 的工作原理必不可少。既然要学习 Rex 那就不得不提起 Shellphish。Shellphish 是由加州大学圣芭芭拉分校学生组成的团队，该团队不仅是传统的 CTF 强队，同时在学术研究方面也底蕴深厚，二进制分析领域的大佬 Christopher Kruegel 为该团队的指导教授之一。Shellphish 为了参与&lt;a href=&quot;https://ma3k4h3d.top/2018/11/01/CGC/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;美国漏洞自动攻防竞赛（CGC）&lt;/a&gt;，设计并实现了 CRS 系统 Mechaphish，而 Rex 正是该系统中负责自动化漏洞利用的模块。本文为学习过程中的笔记，由于接触时间不久，难免在理解上存在不当之处，还需在后续学习过程中逐步完善。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="二进制安全" scheme="http://maskhed.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="CGC AEG" scheme="http://maskhed.github.io/tags/CGC-AEG/"/>
     
   </entry>
   
