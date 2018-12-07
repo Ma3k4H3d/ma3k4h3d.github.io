@@ -37,6 +37,29 @@
     </entry>
     
     <entry>
+      <title>Pwnable passcode</title>
+      <link href="/2018/12/07/passcode/"/>
+      <url>/2018/12/07/passcode/</url>
+      
+        <content type="html"><![CDATA[<p>题目中主要涉及变量未初始化、scanf()误用与GOT表覆写三个知识点，变量未初始化与scanf()误用造成 <a href="https://rootkits.xyz/blog/2017/09/kernel-write-what-where/" target="_blank" rel="noopener">WRITE_WHAT_WHERE</a>，结合GOT表覆写，最终获取到 Flag。<br><a id="more"></a></p><h2 id="0x00-背景知识"><a href="#0x00-背景知识" class="headerlink" title="0x00 背景知识"></a>0x00 背景知识</h2><p>本节仅简要介绍 GOT/PLT 基本概念，详细内容可自行查阅，其中涉及的 ELF 文件格式可参考<a href="http://flint.cs.yale.edu/cs422/doc/ELF_Format.pdf" target="_blank" rel="noopener">《ELF_Format》</a>。</p><p><strong>GOT（Global Offset Table）：</strong>GOT 位于 .got.plt section 中，用以记录 ELF 文件中所用到的共享库中符号的绝对地址。程序初始化时，GOT 表项为空，当符号被首次调用时会动态解析对应地址，并将该地址保存在 GOT 中，之后再次调用该符号时，无需解析，直接跳转至 GOT 表中所保存的地址。</p><p><strong>PLT（Procedure Linkage Table）：</strong>PLT 位于 .plt section 中，用以将位置无关的符号转移到绝对地址。当一个外部符号被调用时，PLT 去引用 GOT 中的其符号对应的绝对地址，然后转入并执行。</p><p>当前的操作系统一般都支持 NX 特性，通常情况下 PLT 具有可执行权限(X)，没有写(W)权限；GOT 具有写权限，却不可执行。这是由于链接器运行时填充的区域，必须是可写的，但可写的区域一般不可执行，对于外部函数来说需要引入一个可执行的区域作为引导，这就是PLT的作用。同时，这也是将 PLT 与 GOT 分开的原因。下图展示了 GOT 表中存有对应符号地址时的寻址过程。<br><img src="/2018/12/07/passcode/GOT:PLT.png" alt=""></p><h2 id="0x01-变量未初始化"><a href="#0x01-变量未初始化" class="headerlink" title="0x01 变量未初始化"></a>0x01 变量未初始化</h2><p><img src="/2018/12/07/passcode/first.png" alt=""></p><p>登录服务器后查看当前目录，共有 passcode.c、passcode、flag 三个文件。尝试读取 flag 内容，提示权限不够。执行 passcode，产生段错误。<br>  <img src="/2018/12/07/passcode/ls-crash.png" alt=""></p><p>查看 passcode.c 文件，发现 login() 函数中的局部变量未初始化，且 main() 函数中 welcome() 与 login() 连续调用，推测两函数 ebp 相同。<br><img src="/2018/12/07/passcode/code1.png" alt=""></p><p>  利用 GDB 对 passcode 进行调试，输入 120 个 ’A‘，由于代码中对输入长度进行了限制，因此 welcome() 函数中的 scanf() 仅接收 100 个字节。此时栈内数据如图所示。<br>  <img src="/2018/12/07/passcode/welcome.jpg" alt=""></p><p>  继续调试，跟进 login() 函数，查看栈布局，发现 24 个字节被 ’A‘ 污染。对比 login() 汇编代码与源代码，分析后可知，通过构造 welcome() 函数中的输入数据，可实现对 login() 函数中 passcode1 变量中所存储内容的完全控制。<br>  <img src="/2018/12/07/passcode/debug-login.png" alt=""></p><h2 id="0x02-Scanf-误用"><a href="#0x02-Scanf-误用" class="headerlink" title="0x02 Scanf()误用"></a>0x02 Scanf()误用</h2><p>再次检查 passcode.c 文件，发现 scanf() 第二个参数缺少 &amp;。<br><img src="/2018/12/07/passcode/code2.png" alt=""><br>查看对应汇编代码，其中取地址时使用了 mov 而非 lea 指令，这使得scanf()产生内存写入漏洞。<br><img src="/2018/12/07/passcode/disas-scanf.png" alt=""><br>至此，利用变量未初始化与 scanf() 误用，已可实现 WRITE_WHAT_WHERE。</p><h2 id="0x03-GOT-覆写"><a href="#0x03-GOT-覆写" class="headerlink" title="0x03 GOT 覆写"></a>0x03 GOT 覆写</h2><p>查看 passcode 开启的安全选项，RELRO 选项为”Partial RELRO“，意味着可以采用GOT表覆写技术实现攻击。<br><img src="/2018/12/07/passcode/checksec.png" alt="">  </p><p>查看 section 信息，发现 GOT 具有写权限。<br><img src="/2018/12/07/passcode/readelf.png" alt=""></p><p>至此，思路已清晰，将passcode1 中所存储的内容布局为随后将会调用的 fflush() 函数地址，并在调用到 scanf(“%d”, passcode1) 时输入 passcode 中调用 system(“/bin/cat flag”) 时的地址即可。<br><img src="/2018/12/07/passcode/code4.png" alt=""></p><p>程序没有开启 PIE，无需 leak，通过 GOT 表获取到 fflush() 地址 “0x0804a004”。</p><p><img src="/2018/12/07/passcode/got.png" alt=""></p><p> 获取 passcode 中调用 system(“/bin/cat flag”) 时的地址，“0x080485e3”<br><img src="/2018/12/07/passcode/login.png" alt=""></p><p>(0x080485e3==134514147)<br><img src="/2018/12/07/passcode/cal.png" alt=""></p><p>构造exp如下并成功获取到 flag：  </p><p><code>python -c &quot;print 96*&#39;A&#39;+&#39;\x04\xa0\x04\x08&#39;+&#39;134514147&#39;&quot; | ./passcode”</code></p><p><img src="/2018/12/07/passcode/flag.jpg" alt=""></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://rickgray.me/2015/08/07/use-gdb-to-study-got-and-plt/" target="_blank" rel="noopener">《通过 GDB 调试理解 GOT/PLT》</a><br><a href="https://blog.csdn.net/anzhsoft/article/details/18776111" target="_blank" rel="noopener">《Linux Debugging（七）: 使用反汇编理解动态库函数调用方式GOT/PLT》</a><br><a href="https://www.cnblogs.com/pannengzhi/p/2018-04-09-about-got-plt.html" target="_blank" rel="noopener">《深入了解GOT,PLT和动态链接》</a><br><a href="https://pediy.com/thread-205334.htm" target="_blank" rel="noopener">《利用got表pwn学习》</a><br><a href="https://r00tk1ts.github.io/2018/03/05/passcode/" target="_blank" rel="noopener">《Writeup.pwnable.kr系列之passcode》</a><br><a href="https://www.nrjfl0w.org/index.php/2016/09/04/passcode-writeup-pwnable/" target="_blank" rel="noopener">《[Pwnable.kr] passcode writeup – Toddler’s bottle》</a><br><a href="http://xhyumiracle.com/pwnable-kr-passcode/" target="_blank" rel="noopener">《Pwnable.kr - passcode》</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 二进制安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PWN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Mr.WxRobot</title>
       <link href="/2018/11/27/Mr-WxRobot/"/>
       <url>/2018/11/27/Mr-WxRobot/</url>
