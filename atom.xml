@@ -53,6 +53,24 @@
   </entry>
   
   <entry>
+    <title>Part 1： Angr Internals</title>
+    <link href="http://maskhed.github.io/2018/12/19/Angr-1/"/>
+    <id>http://maskhed.github.io/2018/12/19/Angr-1/</id>
+    <published>2018-12-19T13:44:11.000Z</published>
+    <updated>2018-12-19T13:50:10.214Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Angr is the popular framework for analyzing binary programs, from embedded firmware, to hardcore CTF challenges, all from the comfort of Python. angr’s roots lie in the Valgrind VEX instrumentation framework, meaning it benefits from the multi-architecture support and community maintenance. However, we live in a big world full of crazy things that aren’t Intel or ARM-based Linux machines.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Angr" scheme="http://maskhed.github.io/categories/Angr/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Pwnable（三）</title>
     <link href="http://maskhed.github.io/2018/12/14/Pwnable-3/"/>
     <id>http://maskhed.github.io/2018/12/14/Pwnable-3/</id>
@@ -82,26 +100,6 @@
     <summary type="html">
     
       &lt;p&gt;本文为 pwnable.kr 第五关 passcode 的 writeup。题目中主要涉及变量未初始化、scanf()误用与GOT表覆写三个知识点，变量未初始化与scanf()误用造成 &lt;a href=&quot;https://rootkits.xyz/blog/2017/09/kernel-write-what-where/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WRITE_WHAT_WHERE&lt;/a&gt;，结合GOT表覆写，最终获取到 Flag。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="二进制安全" scheme="http://maskhed.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="PWN" scheme="http://maskhed.github.io/tags/PWN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pwnable（一）</title>
-    <link href="http://maskhed.github.io/2018/12/07/Pwnable-1/"/>
-    <id>http://maskhed.github.io/2018/12/07/Pwnable-1/</id>
-    <published>2018-12-07T08:46:57.000Z</published>
-    <updated>2018-12-14T10:59:07.444Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作为刚接触 PWN 的菜鸡，在学习相关知识的同时，通过 &lt;a href=&quot;http://pwnable.kr&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;pwnable.kr&lt;/a&gt;来检验学习成果。本文记录了 pwnable 前四关所涉及的知识点，作为学习笔记以备日后 review。  &lt;/p&gt;
     
     </summary>
     
