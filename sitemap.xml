@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://maskhed.github.io/2018/12/20/Vulnerability-Analysis-Method/</loc>
+    
+    <lastmod>2018-12-20T03:29:55.074Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://maskhed.github.io/2018/12/19/Angr-1/</loc>
     
     <lastmod>2018-12-19T13:50:10.214Z</lastmod>
