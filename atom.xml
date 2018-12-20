@@ -57,7 +57,7 @@
     <link href="http://maskhed.github.io/2018/12/20/Vulnerability-Analysis-Method/"/>
     <id>http://maskhed.github.io/2018/12/20/Vulnerability-Analysis-Method/</id>
     <published>2018-12-20T03:27:27.000Z</published>
-    <updated>2018-12-20T03:29:55.074Z</updated>
+    <updated>2018-12-20T04:01:40.647Z</updated>
     
     <summary type="html">
     
@@ -65,7 +65,7 @@
     
     </summary>
     
-      <category term="二进制安全" scheme="http://maskhed.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
+      <category term="漏洞分析" scheme="http://maskhed.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/"/>
     
     
   </entry>
@@ -93,7 +93,7 @@
     <link href="http://maskhed.github.io/2018/12/14/Pwnable-3/"/>
     <id>http://maskhed.github.io/2018/12/14/Pwnable-3/</id>
     <published>2018-12-14T10:52:42.000Z</published>
-    <updated>2018-12-14T11:12:36.453Z</updated>
+    <updated>2018-12-20T04:00:28.887Z</updated>
     
     <summary type="html">
     
@@ -101,10 +101,8 @@
     
     </summary>
     
-      <category term="二进制安全" scheme="http://maskhed.github.io/categories/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/"/>
+      <category term="PWN" scheme="http://maskhed.github.io/categories/PWN/"/>
     
-    
-      <category term="PWN" scheme="http://maskhed.github.io/tags/PWN/"/>
     
   </entry>
   
