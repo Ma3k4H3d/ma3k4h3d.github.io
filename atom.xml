@@ -53,6 +53,24 @@
   </entry>
   
   <entry>
+    <title>Insomnihack_aeg 代码分析</title>
+    <link href="http://maskhed.github.io/2019/01/09/insomnihack-aeg/"/>
+    <id>http://maskhed.github.io/2019/01/09/insomnihack-aeg/</id>
+    <published>2019-01-09T13:37:50.000Z</published>
+    <updated>2019-01-09T14:06:07.098Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://github.com/angr/angr-doc/tree/master/examples/insomnihack_aeg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;insomnihack_aeg&lt;/a&gt; 为官方提供的示例，用以展示 Angr 利用符号执行进行漏洞挖掘并自动生成 Exploit 的能力。代码 &lt;a href=&quot;https://github.com/angr/angr-doc/blob/master/examples/insomnihack_aeg/demo_bin.c&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;demo_bin.c&lt;/a&gt; 中存在堆溢出漏洞，通过脚本 &lt;a href=&quot;https://github.com/angr/angr-doc/blob/master/examples/insomnihack_aeg/solve.py&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;solver.py&lt;/a&gt; 成功挖掘出该漏洞并自动生成 Exploit。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Angr" scheme="http://maskhed.github.io/categories/Angr/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>软件漏洞分析</title>
     <link href="http://maskhed.github.io/2018/12/20/Vulnerability-Analysis-Method/"/>
     <id>http://maskhed.github.io/2018/12/20/Vulnerability-Analysis-Method/</id>
@@ -84,24 +102,6 @@
     </summary>
     
       <category term="Angr" scheme="http://maskhed.github.io/categories/Angr/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Pwnable（三）</title>
-    <link href="http://maskhed.github.io/2018/12/14/Pwnable-3/"/>
-    <id>http://maskhed.github.io/2018/12/14/Pwnable-3/</id>
-    <published>2018-12-14T10:52:42.000Z</published>
-    <updated>2018-12-20T04:00:28.887Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文主要解决 pwnable 中的第六题 “random” 与第七题 “input”，涉及的知识点为伪随机数生成函数 random()与 Linux 基础知识。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="PWN" scheme="http://maskhed.github.io/categories/PWN/"/>
     
     
   </entry>
