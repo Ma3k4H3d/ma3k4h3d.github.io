@@ -37,6 +37,29 @@
     </entry>
     
     <entry>
+      <title>Rex：实例分析 test_linux_stacksmash()</title>
+      <link href="/2019/01/17/Rex-stacksmash/"/>
+      <url>/2019/01/17/Rex-stacksmash/</url>
+      
+        <content type="html"><![CDATA[<p>本文通过调试 test_rex.py 中的 test_linux_stacksmash() 函数，以加深对 Rex 的理解。测试函数 test_linux_stacksmash() 是 Rex 开发团队给出的测试代码，用以展示 Rex 对栈溢出漏洞的自动利用能力。官方提供的测试样例 vuln_stacksmash 为 elf 格式的可执行文件，其中存在栈溢出漏洞，Rex 通过 rop2system、rop2text、jmpesp 三种方式实现了对该漏洞的自动化利用。下文为学习笔记，若存在理解有误的地方，请各位师傅批评指正。</p><a id="more"></a><h2 id="0x00-vuln-stacksmash-栈溢出漏洞"><a href="#0x00-vuln-stacksmash-栈溢出漏洞" class="headerlink" title="0x00 vuln_stacksmash 栈溢出漏洞"></a>0x00 vuln_stacksmash 栈溢出漏洞</h2><p>通过 r2 查看 vuln_stacksmash。sym.vuln 函数中，系统所分配的空闲空间为 0x58，使用 read(int fd, void * buf, size_t count) 函数读入数据时，count 设置为 0x100，超出系统所分配的空闲空间 0x58，导致栈溢出。<br><img src="/2019/01/17/Rex-stacksmash/asm-vul.png" alt=""></p><p>使用 GDB 调试 vuln_stacksmash，分析溢出点状态。调试时需注意，main() 函数中调用 sym.imp.system 时创建了新进程，因此需要在 GDB 中设置 <code>set follow-fork-mode parent</code>，使 GDB 始终附加在父进程中。<br><img src="/2019/01/17/Rex-stacksmash/asm-main.png" alt=""><br>否则在调试过程 GDB 会跟踪至子进程并自动退出。<br><img src="/2019/01/17/Rex-stacksmash/exit.png" alt=""></p><p>首先查看 vuln_stacksmash 保护机制开启情况，由下图可知未开启任何保护机制。<br><img src="/2019/01/17/Rex-stacksmash/checksec.png" alt=""></p><p>使用 GDB 加载 vuln_stacksmash，运行至溢出点，程序状态如下：<br><img src="/2019/01/17/Rex-stacksmash/stack.png" alt=""></p><p>计算偏移为 0x44，构造 PoC 并输入。检查栈上的数据情况，可见 EBP 已被 <code>“\x41\x41\x41\x41”</code> 覆盖，后续四个字节为 EIP 值，也已被覆盖为<code>“\x42\x42\x42\x42”</code>。<br><img src="/2019/01/17/Rex-stacksmash/smash.png" alt=""></p><p>跟踪至 <code>ret</code> 指令，触发异常，EIP 被劫持为<code>“\x42\x42\x42\x42”</code>。<br><img src="/2019/01/17/Rex-stacksmash/eip.png" alt=""></p><p>由于 vuln_stacksmash 存在典型栈溢出漏洞，且未开启安全机制，因此存在多种利用方式。下文概要分析如何使用 Rex 自动生成 Exploit。</p><h2 id="0x01-test-linux-stacksmash"><a href="#0x01-test-linux-stacksmash" class="headerlink" title="0x01 test_linux_stacksmash()"></a>0x01 test_linux_stacksmash()</h2><p>由于 Rex 封装的原因，整体代码看起来较为简洁，从漏洞复现、漏洞类型判定、Exploit 生成到漏洞验证，共计 10 行代码。其中，Crash 类用以复现漏洞并返回漏洞类型，Exploit类用以判定漏洞的可利用性，并生成 exploit。171 ~ 174 行代码用以验证 Exploit 的有效性。<br><img src="/2019/01/17/Rex-stacksmash/code.png" alt=""></p><h2 id="0x02-漏洞复现"><a href="#0x02-漏洞复现" class="headerlink" title="0x02 漏洞复现"></a>0x02 漏洞复现</h2><p>漏洞复现相关功能主要在 Crash 类中实现。在本例中，初始化 rex.Crash()时，共传入以下参数：</p><ul><li>:param binary: vuln_stacksmash 全路径</li><li>:param crash:  PoC</li><li>:param fast_mode: 传入 True，代表将 Angrop 设置为快速查找模式</li><li>:param rop_cache_path: 从该文件中查找 gadgets</li><li>:param tracer_args</li></ul><p><strong>1、获取 Crash state</strong><br>利用 concolic-execution 复现 Crash 状态。通过 QEMU 加载二进制程序，以 PoC 为输入运行，结合符号执行复现 crash_state。调试结果如下：<br><img src="/2019/01/17/Rex-stacksmash/qemu.png" alt=""></p><p><strong>2、利用 Angr 进行分析</strong><br>在获取到 Crash state 之后，使用 Angr 进行分析。首先设置程序初始状态。<br><img src="/2019/01/17/Rex-stacksmash/full_init_state.png" alt=""><br><img src="/2019/01/17/Rex-stacksmash/initial_state_code.png" alt=""></p><p>使用 ‘posix’、’preconstrainer’ 插件辅助分析：<br><img src="/2019/01/17/Rex-stacksmash/register_plugin.png" alt=""></p><p>使用 ‘Tracer’、’Oppologist’ 两种 Exploration_techniques：<br><img src="/2019/01/17/Rex-stacksmash/explore_tech.png" alt=""><br><img src="/2019/01/17/Rex-stacksmash/et.png" alt=""></p><p>设置 simulation_manager ：<br><img src="/2019/01/17/Rex-stacksmash/sm.png" alt=""></p><p>执行结果:<br><img src="/2019/01/17/Rex-stacksmash/angr-analysis.png" alt=""></p><h2 id="0x03-漏洞类型判定"><a href="#0x03-漏洞类型判定" class="headerlink" title="0x03 漏洞类型判定"></a>0x03 漏洞类型判定</h2><p>_triage_crash() 函数依据原理对漏洞类型进行判定。<br><img src="/2019/01/17/Rex-stacksmash/triage_code.png" alt=""></p><p>执行结果为 <code>IP_OVERWRITE</code>：<br><img src="/2019/01/17/Rex-stacksmash/triage.png" alt=""></p><h2 id="0x04-可利用性判定"><a href="#0x04-可利用性判定" class="headerlink" title="0x04 可利用性判定"></a>0x04 可利用性判定</h2><p>仅对以下十二类漏洞能够生成 Exploit。<br><img src="/2019/01/17/Rex-stacksmash/vulnerability.png" alt=""></p><h2 id="0x05-ExploitFactory"><a href="#0x05-ExploitFactory" class="headerlink" title="0x05 ExploitFactory"></a>0x05 ExploitFactory</h2><p>代码中设置了 rop_leak_memory、rop_set_register、 explore_for_exploit 三种利用方式。读过源码后发现， rop_leak_memory、rop_set_register 均是针对 CGC 格式文件的利用技术。 在已有的九种 exploit_technique 中，仅有 call_jmp_sp_shellcode、call_shellcode、rop_to_system 用以针对 elf 文件。执行结果如下：<br><img src="/2019/01/17/Rex-stacksmash/exp.png" alt=""></p><h2 id="0x06-Verified"><a href="#0x06-Verified" class="headerlink" title="0x06 Verified"></a>0x06 Verified</h2><p>对三种生成结果进行确认。<br><img src="/2019/01/17/Rex-stacksmash/test.png" alt=""><br><img src="/2019/01/17/Rex-stacksmash/last.png" alt=""></p><h2 id="0x07-小结"><a href="#0x07-小结" class="headerlink" title="0x07 小结"></a>0x07 小结</h2><p>通过阅读并调试 test_linux_stacksmash()，直观感受了 Rex 对栈溢出漏洞的利用过程，加深了对 Rex 的理解，特别是采用 concolic-execution 复现 Crash 部分。但目前对其中的 Explore_technique、Exploit_technique 等内容理解并不深入，在后续学习过程中逐步完善。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AEG </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CGC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Insomnihack_aeg 代码分析</title>
       <link href="/2019/01/09/insomnihack-aeg/"/>
       <url>/2019/01/09/insomnihack-aeg/</url>
