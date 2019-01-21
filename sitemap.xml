@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://maskhed.github.io/history/index.html</loc>
+    
+    <lastmod>2019-01-21T13:06:45.775Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://maskhed.github.io/about/index.html</loc>
     
     <lastmod>2019-01-21T12:59:59.665Z</lastmod>
@@ -271,13 +278,6 @@
     <loc>http://maskhed.github.io/Hexo/index.html</loc>
     
     <lastmod>2018-10-21T15:01:30.222Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://maskhed.github.io/history/index.html</loc>
-    
-    <lastmod>2018-10-21T08:37:17.638Z</lastmod>
     
   </url>
   
