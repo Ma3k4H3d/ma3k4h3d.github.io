@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://maskhed.github.io/Micro8/index.html</loc>
+    
+    <lastmod>2019-02-27T02:43:57.421Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://maskhed.github.io/2018/12/08/Pwnable-2/</loc>
     
     <lastmod>2019-02-19T08:55:41.175Z</lastmod>
