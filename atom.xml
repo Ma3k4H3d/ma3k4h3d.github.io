@@ -35,6 +35,28 @@
   </entry>
   
   <entry>
+    <title>PPT-test</title>
+    <link href="http://maskhed.github.io/2019/03/06/PPT-test/"/>
+    <id>http://maskhed.github.io/2019/03/06/PPT-test/</id>
+    <published>2019-03-06T02:34:55.000Z</published>
+    <updated>2019-03-06T02:47:47.352Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Normal-PDF&quot;&gt;&lt;a href=&quot;#Normal-PDF&quot; class=&quot;headerlink&quot; title=&quot;Normal PDF&quot;&gt;&lt;/a&gt;Normal PDF&lt;/h2&gt;
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;http
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Rex：源码分析 -- Crash Analysis</title>
     <link href="http://maskhed.github.io/2019/01/23/rex-crash/"/>
     <id>http://maskhed.github.io/2019/01/23/rex-crash/</id>
@@ -90,24 +112,6 @@
     </summary>
     
       <category term="Angr" scheme="http://maskhed.github.io/categories/Angr/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>软件漏洞分析</title>
-    <link href="http://maskhed.github.io/2018/12/20/Vulnerability-Analysis-Method/"/>
-    <id>http://maskhed.github.io/2018/12/20/Vulnerability-Analysis-Method/</id>
-    <published>2018-12-20T03:27:27.000Z</published>
-    <updated>2018-12-20T04:01:40.647Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从理论层面对漏洞分析进行定义，并对常用漏洞分析方法进行总结。  &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="漏洞分析" scheme="http://maskhed.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/"/>
     
     
   </entry>
