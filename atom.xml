@@ -35,6 +35,27 @@
   </entry>
   
   <entry>
+    <title>iwconfig 缓冲区溢出分析及复现（CVE-2003-0947）</title>
+    <link href="http://maskhed.github.io/2019/03/14/CVE-2003-0947/"/>
+    <id>http://maskhed.github.io/2019/03/14/CVE-2003-0947/</id>
+    <published>2019-03-14T01:20:12.000Z</published>
+    <updated>2019-03-14T01:32:08.618Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;iwconfig 是 Linux Wireless Extensions(LWE) 的用户层配置工具之一。LWE 是 Linux 下对无线网络配置的工具，包括内核的支持、用户层配置工具和驱动接口的支持三部分。&lt;br&gt;目前很多无线网卡都支持 LWE，而且主流的 Linux 发布版本，比如 Redhat Linux、Ubuntu Linux 都已经带了这个配置工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p align=&quot;right&quot;&gt; –《百度百科》 &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="漏洞分析" scheme="http://maskhed.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Baab through automatic exploit generation</title>
     <link href="http://maskhed.github.io/2019/03/06/PPT-test/"/>
     <id>http://maskhed.github.io/2019/03/06/PPT-test/</id>
@@ -89,24 +110,6 @@
     
     
       <category term="CGC" scheme="http://maskhed.github.io/tags/CGC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>angr AEG：缓冲区溢出之 Exploit 自动生成</title>
-    <link href="http://maskhed.github.io/2019/01/09/insomnihack-aeg/"/>
-    <id>http://maskhed.github.io/2019/01/09/insomnihack-aeg/</id>
-    <published>2019-01-09T13:37:50.000Z</published>
-    <updated>2019-03-01T07:17:00.048Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://github.com/angr/angr-doc/tree/master/examples/insomnihack_aeg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;insomnihack_aeg&lt;/a&gt; 为官方提供的示例，用以展示 Angr 利用符号执行进行漏洞挖掘并自动生成 Exploit 的能力。代码 &lt;a href=&quot;https://github.com/angr/angr-doc/blob/master/examples/insomnihack_aeg/demo_bin.c&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;demo_bin.c&lt;/a&gt; 中存在堆溢出漏洞，通过脚本 &lt;a href=&quot;https://github.com/angr/angr-doc/blob/master/examples/insomnihack_aeg/solve.py&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;solver.py&lt;/a&gt; 成功挖掘出该漏洞并自动生成 Exploit。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Angr" scheme="http://maskhed.github.io/categories/Angr/"/>
-    
     
   </entry>
   
