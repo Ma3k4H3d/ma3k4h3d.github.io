@@ -35,6 +35,26 @@
   </entry>
   
   <entry>
+    <title>Exploit 自动生成引擎 Rex</title>
+    <link href="http://maskhed.github.io/2019/03/28/rex-1/"/>
+    <id>http://maskhed.github.io/2019/03/28/rex-1/</id>
+    <published>2019-03-28T03:24:23.000Z</published>
+    <updated>2019-03-28T15:29:31.216Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;来自 &lt;a href=&quot;https://www.ucsb.edu&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UCSB&lt;/a&gt;  的团队 &lt;a href=&quot;http://shellphish.net/cgc/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Shellphish&lt;/a&gt;，为参加 DARPA 举办的 &lt;a href=&quot;https://ma3k4h3d.top/2018/11/01/CGC/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CGC&lt;/a&gt; 竞赛，设计并实现了 CRS（Cyber Reasoning System）&lt;a href=&quot;https://github.com/mechaphish&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Mechaphish&lt;/a&gt;。该系统包含自动化漏洞挖掘模块 Driller、Exploit自动生成引擎 Rex、自动补丁模块 Patcherex 以及 ropchain 生成模块 angrop。本文主要对其中的 Exploit 自动生成引擎 &lt;a href=&quot;https://github.com/shellphish/rex&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Rex&lt;/a&gt; 进行介绍，通过分析 Rex 源码，重点对 Crash 复现及可利用判断部分进行说明。弟作为一只资深菜鸡，文中难免存在不当之处，望各位师傅指正 Orz…&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="AEG" scheme="http://maskhed.github.io/categories/AEG/"/>
+    
+    
+      <category term="CGC" scheme="http://maskhed.github.io/tags/CGC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CVE-2004-2093(rsync)缓冲区溢出漏洞分析与复现</title>
     <link href="http://maskhed.github.io/2019/03/19/CVE-2004-2093/"/>
     <id>http://maskhed.github.io/2019/03/19/CVE-2004-2093/</id>
@@ -86,28 +106,6 @@
     
       <category term="漏洞分析" scheme="http://maskhed.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Rex：源码分析 -- Crash Analysis</title>
-    <link href="http://maskhed.github.io/2019/01/23/rex-crash/"/>
-    <id>http://maskhed.github.io/2019/01/23/rex-crash/</id>
-    <published>2019-01-23T08:54:13.000Z</published>
-    <updated>2019-01-23T09:15:46.442Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文用以梳理 Rex 复现、分析 Crash 时的原理及工程实现。相关代码，位于 Crash 类中。复现原理，论文中描述如下：&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Vulnerable States.&lt;/strong&gt; Unlike AEG/Mayhem, but similar to AXGEN, we generate exploits by performing concolic execution on crashing program inputs using angr. We drive concolic execution forward, forcing it to follow the same path as a dynamic trace gathered by concretely executing the crashing input applied to the program. Concolic execution is stopped at the point where the program crashed, and we inspect the symbolic state to determine the cause of the crash and measure exploitability. By counting the number of symbolic bits in certain registers, we can triage a crash into a number of categories such as &lt;em&gt;frame pointer overwrite, instruction pointer overwrite, or arbitrary write,&lt;/em&gt; among others.  &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="AEG" scheme="http://maskhed.github.io/categories/AEG/"/>
-    
-    
-      <category term="CGC" scheme="http://maskhed.github.io/tags/CGC/"/>
     
   </entry>
   

@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="CVE Binary PWN hacker web security angr rex ida hack code python github hexo"><title>Exploit 自动生成引擎 Rex | Mr.Ma3k4H3d</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Exploit 自动生成引擎 Rex</h1><a id="logo" href="/.">Mr.Ma3k4H3d</a><p class="description">竹杖芒鞋轻胜马，一蓑烟雨任平生。</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="https://micro8.github.io/Micro8-HTML/"><i class="fa fa-archive"> Micro8</i></a><a href="https://ma3k4h3d.top/Papers/"><i class="fa fa-archive"> Papers</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/history/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Exploit 自动生成引擎 Rex</h1><div class="post-meta">Mar 28, 2019<span> | </span><span class="category"><a href="/categories/AEG/">AEG</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 2.3k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-hourglass-half"></i><span class="post-count"> 11</span><span class="post-meta-item-text"> 分钟</span></span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、概述"><span class="toc-number">2.</span> <span class="toc-text">一、概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、安装"><span class="toc-number">3.</span> <span class="toc-text">二、安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、源码分析"><span class="toc-number">4.</span> <span class="toc-text">三、源码分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、Crash-可利用性判定"><span class="toc-number">5.</span> <span class="toc-text">四、Crash 可利用性判定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Concrete-Execution"><span class="toc-number">5.1.</span> <span class="toc-text">1、Concrete Execution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Concolic-Execution"><span class="toc-number">5.2.</span> <span class="toc-text">2、Concolic Execution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#（1）初始状态设定"><span class="toc-number">5.3.</span> <span class="toc-text">（1）初始状态设定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#（2）-State-Plugins"><span class="toc-number">5.4.</span> <span class="toc-text">（2） State Plugins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#（3）-路径探索策略"><span class="toc-number">5.5.</span> <span class="toc-text">（3） 路径探索策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Crash-Triage"><span class="toc-number">5.6.</span> <span class="toc-text">3、Crash Triage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、小结"><span class="toc-number">6.</span> <span class="toc-text">五、小结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、参考资料："><span class="toc-number">7.</span> <span class="toc-text">六、参考资料：</span></a></li></ol></div></div><div class="post-content"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>来自 <a href="https://www.ucsb.edu" target="_blank" rel="noopener">UCSB</a>  的团队 <a href="http://shellphish.net/cgc/" target="_blank" rel="noopener">Shellphish</a>，为参加 DARPA 举办的 <a href="https://ma3k4h3d.top/2018/11/01/CGC/" target="_blank" rel="noopener">CGC</a> 竞赛，设计并实现了 CRS（Cyber Reasoning System）<a href="https://github.com/mechaphish" target="_blank" rel="noopener">Mechaphish</a>。该系统包含自动化漏洞挖掘模块 Driller、Exploit自动生成引擎 Rex、自动补丁模块 Patcherex 以及 ropchain 生成模块 angrop。本文主要对其中的 Exploit 自动生成引擎 <a href="https://github.com/shellphish/rex" target="_blank" rel="noopener">Rex</a> 进行介绍，通过分析 Rex 源码，重点对 Crash 复现及可利用判断部分进行说明。弟作为一只资深菜鸡，文中难免存在不当之处，望各位师傅指正 Orz…</p>
+<a id="more"></a>
+<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>Exploit 自动生成引擎 Rex 在硬件模拟器 QEMU 与二进制分析平台 angr 的基础上，通过 Concolic Execution 实现 Exploit 的自动生成。将待分析的应用程序及导致应用程序崩溃的 Crash 作为系统输入，Rex 将复现崩溃路径，并对崩溃时的寄存器状态及内存布局进行分析，判断 Crash 的可利用性，并自动生成 Exploit。</p>
+<p><img src="/2019/03/28/rex-1/Rex_sys.png" alt=""></p>
+<p>源码中对漏洞类型的定义:</p>
+<p><img src="/2019/03/28/rex-1/vulnerability.png" alt=""></p>
+<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><p>安装 Rex 存在两种方式：1）安装 Mechaphish，<a href="https://github.com/mechaphish/mecha-docs/blob/master/development.md" target="_blank" rel="noopener">安装文档</a>；2）仅安装 Rex，<a href="https://github.com/shellphish/rex/issues/5" target="_blank" rel="noopener">参考文档</a>。二者的差别在于 Mechaphish 包含漏洞挖掘模块 Driller、自动利用模块 Rex、自动补丁模块 Patcherex 以及 ropchain 生成模块 angrop。由于各模块之间相互独立，因此本文选择仅安装自动利用模块 Rex。本地环境采用 Ubuntu 16.04.5 Desktop(64 bit)。部署过程中，Rex 所需依赖如下:  </p>
+<p><img src="/2019/03/28/rex-1/Rex.png" alt=""></p>
+<p>安装依赖过程中部分路径需要调整，根据提示信息修改即可。各个依赖所承担的功能如下：</p>
+<table>
+<thead>
+<tr>
+<th>组件名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angr</td>
+<td>A powerful and user-friendly binary analysis platform!</td>
+</tr>
+<tr>
+<td>tracer</td>
+<td>Utilities for generating dynamic traces.</td>
+</tr>
+<tr>
+<td>angrop</td>
+<td>angrop is a rop gadget finder and chain builder.</td>
+</tr>
+<tr>
+<td>compilerex</td>
+<td>POV templates and compilation support for CGC binaries. compilerex is a hacky cgc binary compiler</td>
+</tr>
+<tr>
+<td>shellphish-qemu</td>
+<td>Shellphish’s pip-installable package of QEMU</td>
+</tr>
+<tr>
+<td>povsim</td>
+<td>POV simulation for CGC.</td>
+</tr>
+</tbody>
+</table>
+<p>安装完成后，使用以下代码对 Rex 的功能进行测试。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># triage a crash</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>crash = rex.Crash(<span class="string">"./legit_00003"</span>, <span class="string">b"\x00\x0b1\xc1\x00\x0c\xeb\xe4\xf1\xf1\x14\r\rM\r\xf3\x1b\r\r\r~\x7f\x1b\xe3\x0c`_222\r\rM\r\xf3\x1b\r\x7f\x002\x7f~\x7f\xe2\xff\x7f\xff\xff\x8b\xc7\xc9\x83\x8b\x0c\xeb\x80\x002\xac\xe2\xff\xff\x00t\x8bt\x8bt_o_\x00t\x8b\xc7\xdd\x83\xc2t~n~~\xac\xe2\xff\xff_k_\x00t\x8b\xc7\xdd\x83\xc2t~n~~\xac\xe2\xff\xff\x00t\x8bt\x8b\xac\xf1\x83\xc2t~c\x00\x00\x00~~\x7f\xe2\xff\xff\x00t\x9e\xac\xe2\xf1\xf2@\x83\xc3t"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>crash.crash_types</span><br><span class="line">[<span class="string">'write_what_where'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>crash.explorable()</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="comment"># explore the crash by setting segfaulting pointers to sane values and re-tracing</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>crash.explore()</span><br><span class="line"><span class="comment"># now we can see that we control instruction pointer</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>crash.crash_types</span><br><span class="line"><span class="string">'ip_overwrite'</span></span><br><span class="line"><span class="comment"># generate exploits based off of this crash</span></span><br><span class="line"><span class="comment"># it may take several minutes</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arsenal = crash.exploit()</span><br><span class="line"><span class="comment"># we generated a type 1 POV for every register</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(arsenal.register_setters) <span class="comment"># we generate one circumstantial register setter, one shellcode register setter</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="comment"># and one Type 2 which can leak arbitrary memory</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(arsenal.leakers)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="comment"># exploits are graded based on reliability, and what kind of defenses they can</span></span><br><span class="line"><span class="comment"># bypass, the two best exploits are put into the 'best_type1' and 'best_type2' attributes</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arsenal.best_type1.register</span><br><span class="line"><span class="string">'ebp'</span></span><br><span class="line"><span class="comment"># exploits can be dumped in C, Python, or as a compiled POV</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arsenal.best_type2.dump_c(<span class="string">'legit3_x.c'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arsenal.best_type2.dump_python(<span class="string">'legit3_x.py'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arsenal.best_type2.dump_binary(<span class="string">'legit3_x.pov'</span>)</span><br><span class="line"><span class="comment"># also POVs can be tested against a simulation of the CGC architecture</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arsenal.best_type1.test_binary()</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<p>测试结果如下：</p>
+<p><img src="/2019/03/28/rex-1/install_success.png" alt=""></p>
+<h2 id="三、源码分析"><a href="#三、源码分析" class="headerlink" title="三、源码分析"></a>三、源码分析</h2><p>查看 Rex 源码的目录结构：</p>
+<p><img src="/2019/03/28/rex-1/rex_tree.png" alt=""></p>
+<p>分析各类之间的依赖关系，从逻辑上大致可分为四部分：</p>
+<ul>
+<li>Exploit_factory：调用各模块，负责自动生成 Exploit；</li>
+<li>Crash：复现崩溃路径，判定 Crash 的可利用性；</li>
+<li>Technique：对于可利用的 Crash，采用针对性的技术，生成 Exploit；</li>
+<li>Shellcode_factory：shellcode 仓库，根据需要选用合适的 Shellcode。</li>
+</ul>
+<p><img src="/2019/03/28/rex-1/rex_class_structure.png" alt=""></p>
+<p>下文重点对 Crash 可利用性判定部分进行分析。</p>
+<h2 id="四、Crash-可利用性判定"><a href="#四、Crash-可利用性判定" class="headerlink" title="四、Crash 可利用性判定"></a>四、Crash 可利用性判定</h2><p>Rex 以 Concolic Execution 的方式复现 crash 路径，分析崩溃时寄存器状态及内存布局，并对 crash 的可利用性进行判定，相关功能代码集中在 Crash.py 中。对原理感兴趣的同学可以参考论文<a href="https://github.com/Ma3k4H3d/Papers/blob/master/2016_SP_angrSoK.pdf" target="_blank" rel="noopener">《SoK: (State of) The Art of War: Offensive Techniques in Binary Analysis》</a>，以下是对论文原文的引用：</p>
+<hr>
+<p><strong>Vulnerable States.</strong> Unlike AEG/Mayhem, but similar to AXGEN, we generate exploits by performing concolic execution on crashing program inputs using angr. We drive concolic execution forward, forcing it to follow the same path as a dynamic trace gathered by concretely executing the crashing input applied to the program. Concolic execution is stopped at the point where the program crashed, and we inspect the symbolic state to determine the cause of the crash and measure exploitability. By counting the number of symbolic bits in certain registers, we can triage a crash into a number of categories such as <em>frame pointer overwrite, instruction pointer overwrite, or arbitrary write,</em> among others.  </p>
+<hr>
+<h3 id="1、Concrete-Execution"><a href="#1、Concrete-Execution" class="headerlink" title="1、Concrete Execution"></a>1、Concrete Execution</h3><p>Concolic Execution 原理请感兴趣的同学自行查阅。angr 在实现 concolic execution 时，需要提供 crash_addr。</p>
+<p><img src="/2019/03/28/rex-1/trace.png" alt=""></p>
+<p>因此，通过 QEMU 加载二进制程序及 PoC，以获取 crash_addr。相关功能在 <a href="https://github.com/angr/tracer" target="_blank" rel="noopener">Tracer</a> 模块中实现。  </p>
+<p><img src="/2019/03/28/rex-1/Tracer.png" alt=""></p>
+<p>Crash.py 中调用 Tracer 模块的代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tracer_args=&#123;</span><br><span class="line"><span class="string">'ld_linux'</span>: os.path.join(bin_location, <span class="string">'tests/i386/ld-linux.so.2'</span>),</span><br><span class="line"><span class="string">'library_path'</span>: os.path.join(bin_location, <span class="string">'tests/i386'</span>)&#125;</span><br><span class="line">r = tracer.QEMURunner(binary=binary, input=input_data, argv=argv, trace_timeout=trace_timeout, **tracer_args)</span><br></pre></td></tr></table></figure></p>
+<h3 id="2、Concolic-Execution"><a href="#2、Concolic-Execution" class="headerlink" title="2、Concolic Execution"></a>2、Concolic Execution</h3><p>在获取 crash_addr 之后，对 angr 进行配置，并执行 Concolic Execution。 其中，较为关键的配置包括：</p>
+<ul>
+<li>初始状态设定</li>
+<li>State Plugin 选择</li>
+<li>路径探索策略。</li>
+</ul>
+<h3 id="（1）初始状态设定"><a href="#（1）初始状态设定" class="headerlink" title="（1）初始状态设定"></a>（1）初始状态设定</h3><p>配置 simulation_manager 中的 save_unconstrained 参数。 其中 <code>r</code> 为 tracer.QEMURunner() 返回值，当 PoC 成功触发崩溃时 r.crash_mode 为 <code>True</code>，失败时为 <code>False</code>。  </p>
+<p><img src="/2019/03/28/rex-1/sm.png" alt=""></p>
+<p>通过 full_init_state()方法，设置程序的初始状态：</p>
+<p><img src="/2019/03/28/rex-1/full_init_state.png" alt=""></p>
+<p><img src="/2019/03/28/rex-1/initial_state_code.png" alt=""></p>
+<ul>
+<li><strong>设置 tracing 模式：mode = ‘tracing’</strong></li>
+</ul>
+<p><img src="/2019/03/28/rex-1/mode.png" alt=""></p>
+<ul>
+<li><strong>add_options:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Option name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>so.MEMORY_SYMBOLIC_BYTES_MAP</td>
+<td>Maintain a mapping of symbolic variable to which memory address it “really” corresponds to, at the paged memory level?</td>
+</tr>
+<tr>
+<td>so.TRACK_ACTION_HISTORY</td>
+<td>track the history of actions through a path (multiple states). This action affects things on the angr level</td>
+</tr>
+<tr>
+<td>so.CONCRETIZE_SYMBOLIC_WRITE_SIZES</td>
+<td>Concretize the sizes of symbolic writes to memory</td>
+</tr>
+<tr>
+<td>so.CONCRETIZE_SYMBOLIC_FILE_READ_SIZES</td>
+<td>Concreteize the sizes of file reads</td>
+</tr>
+<tr>
+<td>so.TRACK_MEMORY_ACTIONS</td>
+<td>Keep a SimAction for each memory read and write</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>remove_options:</strong><br>由于 ‘tracing’ 模式下预制了一些选项，因此在优化策略时，不仅需要add_options，而且需要 remove_options。定义在<code>./angr/sim_options.py</code>中：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Option name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>so.TRACK_REGISTER_ACTIONS</td>
+<td>Keep a SimAction for each register read and write</td>
+</tr>
+<tr>
+<td>so.TRACK_TMP_ACTIONS</td>
+<td>Keep a SimAction for each temporary variable read and write</td>
+</tr>
+<tr>
+<td>so.TRACK_JMP_ACTIONS</td>
+<td>Keep a SimAction for each jump or branch</td>
+</tr>
+<tr>
+<td>so.ACTION_DEPS</td>
+<td>Track dependencies in SimActions</td>
+</tr>
+<tr>
+<td>so.TRACK_CONSTRAINT_ACTIONS</td>
+<td>Keep a SimAction for each constraint added</td>
+</tr>
+<tr>
+<td>so.LAZY_SOLVES</td>
+<td>Don’t check satisfiability until absolutely necessary</td>
+</tr>
+<tr>
+<td>so.SIMPLIFY_MEMORY_WRITES</td>
+<td>Run values stored to memory through z3’s simplification</td>
+</tr>
+<tr>
+<td>so.ALL_FILES_EXIST</td>
+<td>Attempting to open an unkown file will result in creating it with a symbolic length</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>设置约束条件：</li>
+</ul>
+<p><img src="/2019/03/28/rex-1/libc.png" alt=""></p>
+<h3 id="（2）-State-Plugins"><a href="#（2）-State-Plugins" class="headerlink" title="（2） State Plugins"></a>（2） State Plugins</h3><p>SimState 属于 angr 核心概念之一，并被设计为插件式的架构，可以根据分析任务的不同，选用针对性的插件。Rex 默认选用了 ‘posix’ 与 ‘preconstrainer’。插件源码位于<code>./angr/state_plugins/</code>目录下。<br><img src="/2019/03/28/rex-1/register_plugin.png" alt=""></p>
+<ul>
+<li><p>SimSystemPosix()<br>Data storage and interaction mechanisms for states with an environment conforming to posix.<br>Available as <code>state.posix</code>.</p>
+</li>
+<li><p>SimStatePreconstrainer()<br>This state plugin manages the concept of preconstraining - adding constraints which you would like to remove later.<br>:param constrained_addrs : SimActions for memory operations whose addresses should be constrained during crash analysis</p>
+</li>
+</ul>
+<h3 id="（3）-路径探索策略"><a href="#（3）-路径探索策略" class="headerlink" title="（3） 路径探索策略"></a>（3） 路径探索策略</h3><p>路径搜索策略的选择，对符号执行来说举足轻重。由于 Rex 在采用 Concolic Execution，因此设置了 ‘Tracer’、’Oppologist’ 两种路径搜索策略。</p>
+<p><img src="/2019/03/28/rex-1/et.png" alt=""></p>
+<p>angr 内置的路径搜索方法存储于 <code>./angr/exploration_techniques/</code> 目录下。Crash.py 中调用代码如下：</p>
+<p><img src="/2019/03/28/rex-1/explore_tech.png" alt=""></p>
+<h3 id="3、Crash-Triage"><a href="#3、Crash-Triage" class="headerlink" title="3、Crash Triage"></a>3、Crash Triage</h3><p>_triage_crash() 中根据 eip、ebp 中符号变量的个数，及发生崩溃时的操作，对 Crash 类型进行判定。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_triage_crash</span><span class="params">(self)</span>:</span></span><br><span class="line">    ip = self.state.regs.ip</span><br><span class="line">    bp = self.state.regs.bp</span><br><span class="line"></span><br><span class="line">    <span class="comment"># any arbitrary receives or transmits</span></span><br><span class="line">    <span class="comment"># <span class="doctag">TODO:</span> receives</span></span><br><span class="line">    zp = self.state.get_plugin(<span class="string">'zen_plugin'</span>) <span class="keyword">if</span> self.os == <span class="string">'cgc'</span> <span class="keyword">else</span> <span class="keyword">None</span></span><br><span class="line">    <span class="keyword">if</span> zp <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span> <span class="keyword">and</span> len(zp.controlled_transmits):</span><br><span class="line">        l.debug(<span class="string">"detected arbitrary transmit vulnerability"</span>)</span><br><span class="line">        self.crash_types.append(Vulnerability.ARBITRARY_TRANSMIT)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># we assume a symbolic eip is always exploitable</span></span><br><span class="line">    <span class="keyword">if</span> self.state.solver.symbolic(ip):</span><br><span class="line">        <span class="comment"># how much control of ip do we have?</span></span><br><span class="line">        <span class="keyword">if</span> self._symbolic_control(ip) &gt;= self.state.arch.bits:</span><br><span class="line">            l.info(<span class="string">"detected ip overwrite vulnerability"</span>)</span><br><span class="line">            self.crash_types.append(Vulnerability.IP_OVERWRITE)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            l.info(<span class="string">"detected partial ip overwrite vulnerability"</span>)</span><br><span class="line">            self.crash_types.append(Vulnerability.PARTIAL_IP_OVERWRITE)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> self.state.solver.symbolic(bp):</span><br><span class="line">        <span class="comment"># how much control of bp do we have</span></span><br><span class="line">        <span class="keyword">if</span> self._symbolic_control(bp) &gt;= self.state.arch.bits:</span><br><span class="line">            l.info(<span class="string">"detected bp overwrite vulnerability"</span>)</span><br><span class="line">            self.crash_types.append(Vulnerability.BP_OVERWRITE)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            l.info(<span class="string">"detected partial bp overwrite vulnerability"</span>)</span><br><span class="line">            self.crash_types.append(Vulnerability.PARTIAL_BP_OVERWRITE)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># if nothing obvious is symbolic let's look at actions</span></span><br><span class="line">    <span class="comment"># grab the all actions in the last basic block</span></span><br><span class="line">    symbolic_actions = [ ]</span><br><span class="line">    <span class="keyword">if</span> self._t <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span> <span class="keyword">and</span> self._t.last_state <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">        recent_actions = reversed(self._t.last_state.history.recent_actions)</span><br><span class="line">        state = self._t.last_state</span><br><span class="line">        <span class="comment"># <span class="doctag">TODO:</span> this is a dead assignment! what was this supposed to be?</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        recent_actions = reversed(self.state.history.actions)</span><br><span class="line">        state = self.state</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> recent_actions:</span><br><span class="line">        <span class="keyword">if</span> a.type == <span class="string">'mem'</span>:</span><br><span class="line">            <span class="keyword">if</span> self.state.solver.symbolic(a.addr):</span><br><span class="line">                symbolic_actions.append(a)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># <span class="doctag">TODO:</span> pick the crashing action based off the crashing instruction address,</span></span><br><span class="line">    <span class="comment"># crash fixup attempts will break on this</span></span><br><span class="line">    <span class="comment">#import ipdb; ipdb.set_trace()</span></span><br><span class="line">    <span class="keyword">for</span> sym_action <span class="keyword">in</span> symbolic_actions:</span><br><span class="line">        <span class="keyword">if</span> sym_action.action == <span class="string">"write"</span>:</span><br><span class="line">            <span class="keyword">if</span> self.state.solver.symbolic(sym_action.data):</span><br><span class="line">                l.info(<span class="string">"detected write-what-where vulnerability"</span>)</span><br><span class="line">                self.crash_types.append(Vulnerability.WRITE_WHAT_WHERE)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                l.info(<span class="string">"detected write-x-where vulnerability"</span>)</span><br><span class="line">                self.crash_types.append(Vulnerability.WRITE_X_WHERE)</span><br><span class="line">             self.violating_action = sym_action</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> sym_action.action == <span class="string">"read"</span>:</span><br><span class="line">            <span class="comment"># special vulnerability type, if this is detected we can explore the crash further</span></span><br><span class="line">            l.info(<span class="string">"detected arbitrary-read vulnerability"</span>)</span><br><span class="line">            self.crash_types.append(Vulnerability.ARBITRARY_READ)</span><br><span class="line"></span><br><span class="line">            self.violating_action = sym_action</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+<h2 id="五、小结"><a href="#五、小结" class="headerlink" title="五、小结"></a>五、小结</h2><p>以上是对 Exploit 自动生成引擎 Rex 的简要介绍，包括 Rex 是什么、如何安装、源码结构，并结合论文，着重对 Crash 可利用性判定的相关代码进行分析。弟作为一只二进制菜鸡，胡言乱语了这么多，望各位师傅批评指正 Orz…</p>
+<h2 id="六、参考资料："><a href="#六、参考资料：" class="headerlink" title="六、参考资料："></a>六、参考资料：</h2><ol>
+<li>rex  <a href="https://github.com/shellphish/rex" target="_blank" rel="noopener">https://github.com/shellphish/rex</a></li>
+<li>Mechaphish  <a href="https://github.com/mechaphish" target="_blank" rel="noopener">https://github.com/mechaphish</a></li>
+<li>Shellphish <a href="http://shellphish.net/cgc/" target="_blank" rel="noopener">http://shellphish.net/cgc/</a></li>
+<li>angr docs  <a href="https://docs.angr.io" target="_blank" rel="noopener">https://docs.angr.io</a></li>
+<li>angr <a href="https://github.com/angr" target="_blank" rel="noopener">https://github.com/angr</a></li>
+<li>《SoK: (State of) The Art of War: Offensive Techniques in Binary Analysis》 <a href="https://github.com/Ma3k4H3d/Papers/blob/master/2016_SP_angrSoK.pdf" target="_blank" rel="noopener">https://github.com/Ma3k4H3d/Papers/blob/master/2016_SP_angrSoK.pdf</a></li>
+</ol>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Mr.Ma3k4H3d</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2019/03/28/rex-1/">http://maskhed.github.io/2019/03/28/rex-1/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 CN 许可协议。转载请注明出处！</li></ul></div><br><div class="tags"><a href="/tags/CGC/">CGC</a></div><div class="post-nav"><a class="pre" href="/2020/12/08/风雨兼程/">即使风雨兼程，也能守得云开见月明</a><a class="next" href="/2019/03/19/CVE-2004-2093/">CVE-2004-2093(rsync)缓冲区溢出漏洞分析与复现</a></div><div id="container"></div><link rel="stylesheet" type="text/css" href="//unpkg.com/gitalk/dist/gitalk.css?v=0.0.0"><script type="text/javascript" src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js?v=0.0.0"></script><script type="text/javascript" src="//unpkg.com/gitalk/dist/gitalk.min.js?v=0.0.0"></script><script type="text/javascript" src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script>var gitalk = new Gitalk({
+  clientID: '5a30c862e87dbcdd2992',
+  clientSecret: 'e098ba3d824802e68648008f80b024617bd8a546',
+  repo: 'ma3k4h3d.github.io',
+  owner: 'Ma3k4H3d',
+  admin: ['Ma3k4H3d'],
+  distractionFreeMode: false
+})
+gitalk.render('container')
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AEG/">AEG</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Angr/">Angr</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PWN/">PWN</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术分享/">技术分享</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/漏洞分析/">漏洞分析</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔杂谈/">随笔杂谈</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/CGC/" style="font-size: 15px;">CGC</a> <a href="/tags/CVE/" style="font-size: 15px;">CVE</a> <a href="/tags/Mr-Robot/" style="font-size: 15px;">Mr.Robot</a> <a href="/tags/SS/" style="font-size: 15px;">SS</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/Fuzz/" style="font-size: 15px;">Fuzz</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/12/08/风雨兼程/">即使风雨兼程，也能守得云开见月明</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/28/rex-1/">Exploit 自动生成引擎 Rex</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/19/CVE-2004-2093/">CVE-2004-2093(rsync)缓冲区溢出漏洞分析与复现</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/CVE-2001-1413/">CVE-2001-1413(nCompress) 缓冲区溢出漏洞分析及复现</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/CVE-2003-0947/">CVE-2003-0947(iwconfig)缓冲区溢出分析及复现</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/23/rex-crash/">Rex：源码分析 -- Crash Analysis</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/17/Rex-stacksmash/">Rex AEG：栈溢出之 Exploit 自动生成</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/09/insomnihack-aeg/">angr AEG：缓冲区溢出之 Exploit 自动生成</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/20/Vulnerability-Analysis-Method/">软件漏洞分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/14/Pwnable-3/">Pwnable（三）</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.t00ls.net/" title="T00ls" target="_blank">T00ls</a><ul></ul><a href="http://riusksk.me" title="riusksk" target="_blank">riusksk</a><ul></ul><a href="https://micropoor.blogspot.com" title="Micropoor" target="_blank">Micropoor</a><ul></ul><a href="http://www.cnblogs.com/backlion" title="Backlion" target="_blank">Backlion</a><ul></ul><a href="https://onebugman.com" title="OneBugMan" target="_blank">OneBugMan</a><ul></ul><a href="http://yama0xff.com" title="yama0xff.com" target="_blank">yama0xff.com</a><ul></ul><a href="https://musicforprogramming.net" title="musicforprogramming.net" target="_blank">musicforprogramming.net</a><ul></ul><a href="https://book.douban.com/annual/2018?source=navigation" title="好书精选" target="_blank">好书精选</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer"><div>Total<span id="busuanzi_container_site_pv"><span> </span><span id="busuanzi_value_site_pv"></span></span><span rel="nofollow">  hits, </span><span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span><span rel="nofollow">  visitors. </span></div><div><script>var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275288791'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275288791%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>Copyright © 2019 <a href="/." rel="nofollow">Mr.Ma3k4H3d.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="208,55,66" opacity="0.3" zindex="-1" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

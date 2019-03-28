@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://maskhed.github.io/2019/03/28/rex-1/</loc>
+    
+    <lastmod>2019-03-28T15:29:31.216Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://maskhed.github.io/2019/03/14/CVE-2003-0947/</loc>
     
     <lastmod>2019-03-19T13:04:43.700Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://maskhed.github.io/2019/01/23/rex-crash/</loc>
     
     <lastmod>2019-01-23T09:15:46.442Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://maskhed.github.io/2018/11/10/rex-1/</loc>
-    
-    <lastmod>2019-01-23T08:59:34.686Z</lastmod>
     
   </url>
   

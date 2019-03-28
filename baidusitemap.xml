@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://maskhed.github.io/2019/03/28/rex-1/</loc>
+    <lastmod>2019-03-28</lastmod>
+  </url>  <url>
     <loc>http://maskhed.github.io/2019/03/14/CVE-2003-0947/</loc>
     <lastmod>2019-03-19</lastmod>
   </url>  <url>
@@ -20,9 +23,6 @@
     <lastmod>2019-02-19</lastmod>
   </url>  <url>
     <loc>http://maskhed.github.io/2019/01/23/rex-crash/</loc>
-    <lastmod>2019-01-23</lastmod>
-  </url>  <url>
-    <loc>http://maskhed.github.io/2018/11/10/rex-1/</loc>
     <lastmod>2019-01-23</lastmod>
   </url>  <url>
     <loc>http://maskhed.github.io/2018/11/16/AEG-Research-Status/</loc>
