@@ -39,11 +39,11 @@
     <link href="http://maskhed.github.io/2019/03/29/OSVDB-16373-glFTPd/"/>
     <id>http://maskhed.github.io/2019/03/29/OSVDB-16373-glFTPd/</id>
     <published>2019-03-29T09:14:23.000Z</published>
-    <updated>2019-03-29T09:21:43.989Z</updated>
+    <updated>2019-03-29T09:29:19.947Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;0x00-glFTPd&quot;&gt;&lt;a href=&quot;#0x00-glFTPd&quot; class=&quot;headerlink&quot; title=&quot;0x00 glFTPd&quot;&gt;&lt;/a&gt;0x00 glFTPd&lt;/h2&gt;&lt;p&gt;glFTPd is a very advanced ftp server with lots of possibilities. One of the main differences between many other ftp servers and glFTPd is that it has its own user database which can be completely maintained online using ftp site commands. Using ftp site commands it is also possible to see stats, view logs, execute scripts and do many more things. glFTPd runs within a chroot environment which makes it relatively safe. The glFTPd team continuously works on improving this free piece of beautiful software.&lt;/p&gt;
+      &lt;p&gt;glFTPd is a very advanced ftp server with lots of possibilities. One of the main differences between many other ftp servers and glFTPd is that it has its own user database which can be completely maintained online using ftp site commands. Using ftp site commands it is also possible to see stats, view logs, execute scripts and do many more things. glFTPd runs within a chroot environment which makes it relatively safe. The glFTPd team continuously works on improving this free piece of beautiful software.&lt;/p&gt;
     
     </summary>
     
@@ -57,11 +57,11 @@
     <link href="http://maskhed.github.io/2019/03/28/rex-1/"/>
     <id>http://maskhed.github.io/2019/03/28/rex-1/</id>
     <published>2019-03-28T03:24:23.000Z</published>
-    <updated>2019-03-28T15:29:31.216Z</updated>
+    <updated>2019-03-29T09:30:08.532Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;来自 &lt;a href=&quot;https://www.ucsb.edu&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UCSB&lt;/a&gt;  的团队 &lt;a href=&quot;http://shellphish.net/cgc/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Shellphish&lt;/a&gt;，为参加 DARPA 举办的 &lt;a href=&quot;https://ma3k4h3d.top/2018/11/01/CGC/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CGC&lt;/a&gt; 竞赛，设计并实现了 CRS（Cyber Reasoning System）&lt;a href=&quot;https://github.com/mechaphish&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Mechaphish&lt;/a&gt;。该系统包含自动化漏洞挖掘模块 Driller、Exploit自动生成引擎 Rex、自动补丁模块 Patcherex 以及 ropchain 生成模块 angrop。本文主要对其中的 Exploit 自动生成引擎 &lt;a href=&quot;https://github.com/shellphish/rex&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Rex&lt;/a&gt; 进行介绍，通过分析 Rex 源码，重点对 Crash 复现及可利用判断部分进行说明。弟作为一只资深菜鸡，文中难免存在不当之处，望各位师傅指正 Orz…&lt;/p&gt;
+      &lt;p&gt;来自 &lt;a href=&quot;https://www.ucsb.edu&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UCSB&lt;/a&gt;  的团队 &lt;a href=&quot;http://shellphish.net/cgc/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Shellphish&lt;/a&gt;，为参加 DARPA 举办的 &lt;a href=&quot;https://ma3k4h3d.top/2018/11/01/CGC/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CGC&lt;/a&gt; 竞赛，设计并实现了 CRS（Cyber Reasoning System）&lt;a href=&quot;https://github.com/mechaphish&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Mechaphish&lt;/a&gt;。该系统包含自动化漏洞挖掘模块 Driller、Exploit自动生成引擎 Rex、自动补丁模块 Patcherex 以及 ropchain 生成模块 angrop。本文主要对其中的 Exploit 自动生成引擎 &lt;a href=&quot;https://github.com/shellphish/rex&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Rex&lt;/a&gt; 进行介绍，通过分析 Rex 源码，重点对 Crash 复现及可利用判断部分进行说明。弟作为一只资深菜鸡，文中难免存在不当之处，望各位师傅指正 Orz…&lt;/p&gt;
     
     </summary>
     
@@ -77,11 +77,11 @@
     <link href="http://maskhed.github.io/2019/03/19/CVE-2004-2093/"/>
     <id>http://maskhed.github.io/2019/03/19/CVE-2004-2093/</id>
     <published>2019-03-19T12:34:03.000Z</published>
-    <updated>2019-03-19T12:55:58.244Z</updated>
+    <updated>2019-03-29T09:30:36.269Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;0x00-rsync-简介&quot;&gt;&lt;a href=&quot;#0x00-rsync-简介&quot; class=&quot;headerlink&quot; title=&quot;0x00 rsync 简介&quot;&gt;&lt;/a&gt;0x00 rsync 简介&lt;/h2&gt;&lt;p&gt;Rsync is a fast and extraordinarily versatile file copying tool. It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon. It offers a large number of options that control every aspect of its behavior and permit very flexible specification of the set of files to be copied. It is famous for its delta-transfer algorithm, which reduces the amount of data sent over the network by sending only the differences between the source files and the existing files in the destination. Rsync is widely used for backups and mirroring and as an improved copy command for everyday use.&lt;/p&gt;
+      &lt;p&gt;Rsync is a fast and extraordinarily versatile file copying tool. It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon. It offers a large number of options that control every aspect of its behavior and permit very flexible specification of the set of files to be copied. It is famous for its delta-transfer algorithm, which reduces the amount of data sent over the network by sending only the differences between the source files and the existing files in the destination. Rsync is widely used for backups and mirroring and as an improved copy command for everyday use.&lt;/p&gt;
     
     </summary>
     
